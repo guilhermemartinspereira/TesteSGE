@@ -91,12 +91,32 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_qMnTEBe0EeaRmvQzRRFWvg" name="cancelarCriacao"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_crbJgBe1EeaRmvQzRRFWvg" name="editar"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="__Fyr8Be1EeaRmvQzRRFWvg" name="cancelarEdicao"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_whVHgBe2EeaRmvQzRRFWvg" name="editarErro"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_whVHgBe2EeaRmvQzRRFWvg" name="editarErro">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YT9Y4BlIEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_YT9Y4RlIEeabCZ6m0M899g"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_EJc9oBe3EeaRmvQzRRFWvg" name="mostrarMensagemErro" method="_ItyEcBe3EeaRmvQzRRFWvg _nD4jIBhaEeaPkPy0HRxdBw"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_gFDQIBhXEeaPkPy0HRxdBw" name="editarSucesso"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gFDQIBhXEeaPkPy0HRxdBw" name="editarSucesso">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SlahsBlIEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_SlahsRlIEeabCZ6m0M899g" value="true"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_qsmdoBhXEeaPkPy0HRxdBw" name="mostrarMensagemSucesso" method="_MRd7cBhYEeaPkPy0HRxdBw _Kw1kQBhaEeaPkPy0HRxdBw _qP6IUBhcEeaPkPy0HRxdBw"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_4rH8EBhZEeaPkPy0HRxdBw" name="criarSucesso"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_g67n4BhaEeaPkPy0HRxdBw" name="criarErro"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4rH8EBhZEeaPkPy0HRxdBw" name="criarSucesso">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4WiaABlHEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_4WiaARlHEeabCZ6m0M899g" value="true"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_g67n4BhaEeaPkPy0HRxdBw" name="criarErro">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_stOqABlGEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_stOqARlGEeabCZ6m0M899g"/>
+        </ownedParameter>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_eiFrwBhbEeaPkPy0HRxdBw" name="buscar"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_lUTxABhcEeaPkPy0HRxdBw" name="deletar"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_3SAFoBhcEeaPkPy0HRxdBw" name="mostrarResultados" method="_3n1LsBhcEeaPkPy0HRxdBw"/>

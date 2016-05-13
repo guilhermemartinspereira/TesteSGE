@@ -13,17 +13,17 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public static WebDriver driver;
 	public static String inicio = "https://www.google.com/";
 	public static Map<Estado, String> titulos;
-	public static Map<String, String> selectors;
+	public static Map<String, String> seletores;
 	static {
 		titulos = new HashMap<>();
 		titulos.put(Estado.CriandoItem, "SGE - Criação de Item");
 		titulos.put(Estado.ListandoItem, "SGE - Lista de Itens");
 		titulos.put(Estado.EditandoItem, "SGE - Edição de Item");
 		
-		selectors = new HashMap<>();
-		selectors.put("Botao Criar", ".jhp input[type='submit']");
-		selectors.put("Link de Item", ".item:nth-of-type(1)");
-		selectors.put("Botao Deletar", ".deletar:nth-of-type(1)");
+		seletores = new HashMap<>();
+		seletores.put("Botao Criar", ".jhp input[type='submit']");
+		seletores.put("Link de Item", ".item:nth-of-type(1)");
+		seletores.put("Botao Deletar", ".deletar:nth-of-type(1)");
 	}
 	
 	@Override
@@ -36,7 +36,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.get(inicio);
 			Thread.sleep(2000);
 			
-			driver.findElement(By.cssSelector(selectors.get("Botao Criar"))).click();
+			driver.findElement(By.cssSelector(seletores.get("Botao Criar"))).click();
 			Thread.sleep(2000);
 			
 			Assert.assertEquals("O título mudou para o da tela de criação? ", titulos.get(Estado.CriandoItem), driver.getTitle());

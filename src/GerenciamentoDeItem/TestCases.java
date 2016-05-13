@@ -14,15 +14,12 @@ public class TestCases{
 	public void test1()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		Boolean dadosValidos2 = true;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
-		oTestObject.handleEvent("EventoCriar");
-		assertEquals(true, (oTestObject.estado == Estado.CriandoItem));
-		oTestObject.handleEvent("EventoCancelarCriacao");
-		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
-		oTestObject.handleEvent("EventoCriar");
-		assertEquals(true, (oTestObject.estado == Estado.CriandoItem));
-		assertEquals(true, (oTestObject.dadosValidos.booleanValue() == true));
-		oTestObject.handleEvent("EventoCriarSucesso");
+		oTestObject.handleEvent("EventoEditar");
+		assertEquals(true, (oTestObject.estado == Estado.EditandoItem));
+		assertEquals(true, (dadosValidos2.booleanValue() == true));
+		oTestObject.handleEvent("EventoEditarSucesso", dadosValidos2);
 		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
 		
 	}
@@ -31,16 +28,13 @@ public class TestCases{
 	public void test2()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		Boolean dadosValidos2 = false;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
 		oTestObject.handleEvent("EventoCriar");
 		assertEquals(true, (oTestObject.estado == Estado.CriandoItem));
-		oTestObject.handleEvent("EventoCancelarCriacao");
-		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
-		oTestObject.handleEvent("EventoEditar");
-		assertEquals(true, (oTestObject.estado == Estado.EditandoItem));
-		assertEquals(true, (oTestObject.dadosValidos.booleanValue() == true));
-		oTestObject.handleEvent("EventoEditarSucesso");
-		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
+		assertEquals(true, (dadosValidos2.booleanValue() == false));
+		oTestObject.handleEvent("EventoCriarErro", dadosValidos2);
+		assertEquals(true, (oTestObject.estado == Estado.CriandoItem));
 		
 	}
 	
@@ -48,12 +42,13 @@ public class TestCases{
 	public void test3()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		Boolean dadosValidos2 = true;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
 		oTestObject.handleEvent("EventoCriar");
 		assertEquals(true, (oTestObject.estado == Estado.CriandoItem));
-		assertEquals(true, (oTestObject.dadosValidos.booleanValue() == false));
-		oTestObject.handleEvent("EventoCriarErro");
-		assertEquals(true, (oTestObject.estado == Estado.CriandoItem));
+		assertEquals(true, (dadosValidos2.booleanValue() == true));
+		oTestObject.handleEvent("EventoCriarSucesso", dadosValidos2);
+		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
 		
 	}
 	
@@ -61,11 +56,12 @@ public class TestCases{
 	public void test4()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		Boolean dadosValidos2 = false;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoItem));
 		oTestObject.handleEvent("EventoEditar");
 		assertEquals(true, (oTestObject.estado == Estado.EditandoItem));
-		assertEquals(true, (oTestObject.dadosValidos.booleanValue() == false));
-		oTestObject.handleEvent("EventoEditarErro");
+		assertEquals(true, (dadosValidos2.booleanValue() == false));
+		oTestObject.handleEvent("EventoEditarErro", dadosValidos2);
 		assertEquals(true, (oTestObject.estado == Estado.EditandoItem));
 		
 	}

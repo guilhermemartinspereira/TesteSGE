@@ -46,4 +46,10 @@ public class ContextoGerenciamentoDeItem {
 		}
 	}
 
+	public void handleEvent(String evento, Boolean dadosValidos) {
+		// TODO Auto-generated method stub
+		this.dadosValidos = dadosValidos;
+		this.handleEvent(evento);		
+	}
+
 }
