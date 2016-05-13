@@ -2,47 +2,43 @@ package GerenciamentoDeItem;
 
 public class ContextoGerenciamentoDeItem {
 
-	public Estado estado;
+	public Estado estado = Estado.ListandoItem;
 	public Boolean dadosValidos;
-	private Adaptador adaptador;
-	
-	public void setup(Adaptador adaptador) {
-		this.adaptador = adaptador;
-	}	
 
 	public void handleEvent(String evento) {
 		// TODO Auto-generated method stub
+		Adaptador adaptador = ProvedorDeAdaptador.getInstance();
 		
 		switch (evento) {
 		case "EventoCriar":
-			adaptador.executarEventoCriar(estado, dadosValidos);
+			adaptador.executarEventoCriar(this);
 			break;
 		case "EventoCancelarCriacao":
-			adaptador.executarEventoCancelarCriacao(estado, dadosValidos);
+			adaptador.executarEventoCancelarCriacao(this);
 			break;
 		case "EventoEditar":
-			adaptador.executarEventoEditar(estado, dadosValidos);
+			adaptador.executarEventoEditar(this);
 			break;
 		case "EventoCancelarEdicao":
-			adaptador.executarEventoCancelarEdicao(estado, dadosValidos);
+			adaptador.executarEventoCancelarEdicao(this);
 			break;
 		case "EventoCriarErro":
-			adaptador.executarEventoCriarErro(estado, dadosValidos);
+			adaptador.executarEventoCriarErro(this);
 			break;
 		case "EventoCriarSucesso":
-			adaptador.executarEventoCriarSucesso(estado, dadosValidos);
+			adaptador.executarEventoCriarSucesso(this);
 			break;
 		case "EventoEditarErro":
-			adaptador.executarEventoEditarErro(estado, dadosValidos);
+			adaptador.executarEventoEditarErro(this);
 			break;
 		case "EventoEditarSucesso":
-			adaptador.executarEventoEditarSucesso(estado, dadosValidos);
+			adaptador.executarEventoEditarSucesso(this);
 			break;
 		case "EventoBuscar":
-			adaptador.executarEventoBuscar(estado, dadosValidos);
+			adaptador.executarEventoBuscar(this);
 			break;
 		case "EventoDeletar":
-			adaptador.executarEventoDeletar(estado, dadosValidos);
+			adaptador.executarEventoDeletar(this);
 			break;
 
 		default:
