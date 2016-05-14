@@ -10,7 +10,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public static WebDriver driver;
 	public static ConhecimentoDeDominioDeInterfaceWeb conhecimento;
 	
-	static {
+	public AdaptadorInterfaceWeb() {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 		conhecimento = new ConhecimentoDeDominioDeInterfaceWeb();
@@ -39,7 +39,6 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			e.printStackTrace();
 		}
 	}
-
 
 	@Override
 	public void executarEventoCancelarCriacao(ContextoGerenciamentoDeItem contexto) {

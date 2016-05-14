@@ -4,14 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ConhecimentoDeDominioDeInterfaceWeb {
-
-	public static String inicio = "https://www.google.com/";
-	public static Map<String, String> mapa;
+	protected static Map<String, String> mapa;
 	
 	public ConhecimentoDeDominioDeInterfaceWeb() {
 		mapa = new HashMap<>();
 		
-		mapa.put("url.inicio", "SGE - Criação de Item");
+		mapa.put("url.inicio", "https://www.google.com/");
 		
 		mapa.put("titulo." + Estado.CriandoItem.toString(), "SGE - Criação de Item");
 		mapa.put("titulo." + Estado.ListandoItem.toString(), "SGE - Lista de Itens");
