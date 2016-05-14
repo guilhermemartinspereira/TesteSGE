@@ -9,19 +9,19 @@
 ### satisfied test goals
 
  - satisfied: (test goal #1 - node) 
-   reach state tmp4
- - satisfied: (test goal #2 - node) 
-   reach state tmp1
- - satisfied: (test goal #3 - node) 
    reach state tmp2
- - satisfied: (test goal #4 - node) 
+ - satisfied: (test goal #2 - node) 
+   reach state tmp4
+ - satisfied: (test goal #3 - node) 
    reach state tmp3
+ - satisfied: (test goal #4 - node) 
+   reach state tmp1
  - satisfied: (test goal #5 - node) 
-   reach state MaquinaEstadosGerenciamentoDeItem::Region1::EditandoItem
- - satisfied: (test goal #6 - node) 
    reach state tmp6
- - satisfied: (test goal #7 - node) 
+ - satisfied: (test goal #6 - node) 
    reach state tmp5
+ - satisfied: (test goal #7 - node) 
+   reach state MaquinaEstadosGerenciamentoDeItem::Region1::EditandoItem
  - satisfied: (test goal #8 - node) 
    reach state MaquinaEstadosGerenciamentoDeItem::Region1::CriandoItem
  - satisfied: (test goal #9 - node) 
