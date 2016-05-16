@@ -10,6 +10,11 @@ public class TestCases{
 		return new junit.framework.JUnit4TestAdapter(TestCases.class);
 	}
 	
+	@Before
+    public void setUp() {
+		ProvedorDeAdaptador.reset();
+    }
+	
 	@Test
 	public void test1()
 	{

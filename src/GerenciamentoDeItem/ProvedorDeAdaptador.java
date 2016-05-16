@@ -14,4 +14,8 @@ public class ProvedorDeAdaptador {
 		return instance;
 	}
 
+	public static void reset() {
+		instance = new AdaptadorInterfaceWeb();
+	}
+
 }

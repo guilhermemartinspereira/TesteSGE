@@ -9,33 +9,33 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 	public ConhecimentoDeDominioDeInterfaceWeb() {
 		mapa = new HashMap<>();
 		
-		mapa.put("url.inicio", "https://www.google.com/");
+		mapa.put("url.inicio", "http://localhost:8100/#/tab/itens");
 		
-		mapa.put("titulo." + Estado.CriandoItem.toString(), "SGE - Criação de Item");
-		mapa.put("titulo." + Estado.ListandoItem.toString(), "SGE - Lista de Itens");
-		mapa.put("titulo." + Estado.EditandoItem.toString(), "SGE - Edição de Item");
+		mapa.put("titulo." + Estado.CriandoItem.toString(), "Item");
+		mapa.put("titulo." + Estado.ListandoItem.toString(), "Itens");
+		mapa.put("titulo." + Estado.EditandoItem.toString(), "Item");
 		
-		mapa.put("seletor.linkCriar", "input[type='submit']");
-		mapa.put("seletor.linkEditar", ".item:nth-of-type(1)");
-		mapa.put("seletor.linkDeletar", ".deletar:nth-of-type(1)");
-		mapa.put("seletor.linkCancelar", ".cancelar");
-		mapa.put("seletor.linkPesquisar", ".pesquisar");
-		mapa.put("seletor.enviarDados", "input[type='submit']");
+		mapa.put("seletor.linkCriar", ".button-add");
+		mapa.put("seletor.linkEditar", ".item:nth-of-type(1) a");
+		mapa.put("seletor.linkDeletar", ".button-remove:nth-of-type(1)");
+		mapa.put("seletor.linkCancelar", ".back-button");
+		mapa.put("seletor.linkPesquisar", ".button-search");
+		mapa.put("seletor.enviarDados", ".button.button-full");
 		
 		mapa.put("seletor.campoNome", "input[name='nome']");
-		mapa.put("seletor.campoQuantidade", "input[name='quantidade']");
 		mapa.put("seletor.campoPreco", "input[name='preco']");
 		mapa.put("seletor.campoUnidade", "input[name='unidade']");
 		
-		mapa.put("seletor.campoConsulta", "input[name='consulta']");
-
-		mapa.put("mensagem.editarErro", "Erro ao Editar");
-		mapa.put("mensagem.criarErro", "Erro ao Criar");
-		mapa.put("mensagem.editarSucesso", "Editado com sucesso");
-		mapa.put("mensagem.criarSucesso", "Criado com sucesso");
-		mapa.put("mensagem.deletarSucesso", "Deletado com sucesso");
+		mapa.put("seletor.campoConsulta", "input[type='search']");
+		mapa.put("seletor.item", ".item");
 		
-		mapa.put("dado.valido.nome", "Camiseta Florida");
+		mapa.put("mensagem.editarErro", "Alguns campos estão com erros");
+		mapa.put("mensagem.criarErro", "Alguns campos estão com erros");
+		mapa.put("mensagem.editarSucesso", "Item salvo com sucesso");
+		mapa.put("mensagem.criarSucesso", "Item criado com sucesso");
+		mapa.put("mensagem.deletarSucesso", "Item excluído com sucesso");
+		
+		mapa.put("dado.valido.nome", "camiseta");
 		mapa.put("dado.valido.quantidade", "50");
 		mapa.put("dado.valido.unidade", "UN");
 		mapa.put("dado.valido.precoVenda", "50,00");
