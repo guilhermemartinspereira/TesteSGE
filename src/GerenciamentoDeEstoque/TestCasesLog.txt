@@ -1,0 +1,62 @@
+### Test Case Generation Statistics
+### Test Goal Satisfaction
+ - defined 11 test goals
+ - satisfied 11 test goals (100.0 %)
+
+### unsatisfied test goals
+
+
+### satisfied test goals
+
+ - satisfied: (test goal #1 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::EditandoItem
+   to node MaquinaEstadosGerenciamentoDeEstoque::Region1::ListandoItem
+   triggered by EventoCancelarEdicao
+ - satisfied: (test goal #2 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::EditandoItem
+   to node tmp2
+   triggered by EventoEditarSucesso
+   with condition truth: true
+((dadosValidos = true))
+ - satisfied: (test goal #3 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::CriandoItem
+   to node tmp4
+   triggered by EventoCriarErro
+   with condition truth: true
+((dadosValidos = false))
+ - satisfied: (test goal #4 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::CriandoItem
+   to node MaquinaEstadosGerenciamentoDeEstoque::Region1::ListandoItem
+   triggered by EventoCancelarCriacao
+ - satisfied: (test goal #5 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::CriandoItem
+   to node tmp3
+   triggered by EventoCriarSucesso
+   with condition truth: true
+((dadosValidos = true))
+ - satisfied: (test goal #6 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::EditandoItem
+   to node tmp1
+   triggered by EventoEditarErro
+   with condition truth: true
+((dadosValidos = false))
+ - satisfied: (test goal #7 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::ListandoItem
+   to node MaquinaEstadosGerenciamentoDeEstoque::Region1::CriandoItem
+   triggered by EventoCriar
+ - satisfied: (test goal #8 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::ListandoItem
+   to node tmp5
+   triggered by EventoBuscar
+ - satisfied: (test goal #9 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::ListandoItem
+   to node MaquinaEstadosGerenciamentoDeEstoque::Region1::EditandoItem
+   triggered by EventoEditar
+ - satisfied: (test goal #10 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::ListandoItem
+   to node tmp6
+   triggered by EventoDeletar
+ - satisfied: (test goal #11 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeEstoque::Region1::inicio
+   to node MaquinaEstadosGerenciamentoDeEstoque::Region1::ListandoItem
+   triggered by default
