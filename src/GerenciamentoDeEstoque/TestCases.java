@@ -14,6 +14,20 @@ public class TestCases{
 	public void test1()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		Boolean dadosValidos2 = false;
+		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
+		oTestObject.handleEvent("EventoEditar");
+		assertEquals(true, (oTestObject.estado == Estado.EditandoEstoque));
+		assertEquals(true, (dadosValidos2.booleanValue() == false));
+		oTestObject.handleEvent("EventoEditarErro", dadosValidos2);
+		assertEquals(true, (oTestObject.estado == Estado.EditandoEstoque));
+		
+	}
+	
+	@Test
+	public void test2()
+	{
+		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		oTestObject.handleEvent("EventoEditar");
 		assertEquals(true, (oTestObject.estado == Estado.EditandoEstoque));
@@ -23,7 +37,7 @@ public class TestCases{
 	}
 	
 	@Test
-	public void test2()
+	public void test3()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
 		Boolean dadosValidos2 = true;
@@ -33,20 +47,6 @@ public class TestCases{
 		assertEquals(true, (dadosValidos2.booleanValue() == true));
 		oTestObject.handleEvent("EventoEditarSucesso", dadosValidos2);
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		
-	}
-	
-	@Test
-	public void test3()
-	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
-		Boolean dadosValidos2 = false;
-		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoCriar");
-		assertEquals(true, (oTestObject.estado == Estado.CriandoEstoque));
-		assertEquals(true, (dadosValidos2.booleanValue() == false));
-		oTestObject.handleEvent("EventoCriarErro", dadosValidos2);
-		assertEquals(true, (oTestObject.estado == Estado.CriandoEstoque));
 		
 	}
 	
@@ -66,6 +66,20 @@ public class TestCases{
 	public void test5()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		Boolean dadosValidos2 = false;
+		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
+		oTestObject.handleEvent("EventoCriar");
+		assertEquals(true, (oTestObject.estado == Estado.CriandoEstoque));
+		assertEquals(true, (dadosValidos2.booleanValue() == false));
+		oTestObject.handleEvent("EventoCriarErro", dadosValidos2);
+		assertEquals(true, (oTestObject.estado == Estado.CriandoEstoque));
+		
+	}
+	
+	@Test
+	public void test6()
+	{
+		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
 		Boolean dadosValidos2 = true;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		oTestObject.handleEvent("EventoCriar");
@@ -77,25 +91,11 @@ public class TestCases{
 	}
 	
 	@Test
-	public void test6()
-	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
-		Boolean dadosValidos2 = false;
-		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoEditar");
-		assertEquals(true, (oTestObject.estado == Estado.EditandoEstoque));
-		assertEquals(true, (dadosValidos2.booleanValue() == false));
-		oTestObject.handleEvent("EventoEditarErro", dadosValidos2);
-		assertEquals(true, (oTestObject.estado == Estado.EditandoEstoque));
-		
-	}
-	
-	@Test
 	public void test7()
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoBuscar");
+		oTestObject.handleEvent("EventoDeletar");
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		
 	}
@@ -105,7 +105,7 @@ public class TestCases{
 	{
 		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoDeletar");
+		oTestObject.handleEvent("EventoBuscar");
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		
 	}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_h0mQ4CQ5Eea-KrJOsR6g3A" name="">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_iBePQCQ5Eea-KrJOsR6g3A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ryzmcCQ5Eea-KrJOsR6g3A" name="EntradaSaidaDeEstoque">
+    <packagedElement xmi:type="uml:Class" xmi:id="_5oEGECQ5Eea-KrJOsR6g3A" name="ContextoEntradaSaidaDeEstoque">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5WjC0CQ6Eea-KrJOsR6g3A" name="estado" type="_FV4_ICQ6Eea-KrJOsR6g3A"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-HpoECQ_Eea-KrJOsR6g3A" name="quantidade">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_h3wSkCQ5Eea-KrJOsR6g3A" name="StateMachine1">
+        <region xmi:type="uml:Region" xmi:id="_h41QoCQ5Eea-KrJOsR6g3A" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_NcPzgCRAEea-KrJOsR6g3A" source="_dlZ3ICQ6Eea-KrJOsR6g3A" target="_eL5PYCQ6Eea-KrJOsR6g3A"/>
+          <transition xmi:type="uml:Transition" xmi:id="_QY5K0CRAEea-KrJOsR6g3A" source="_eL5PYCQ6Eea-KrJOsR6g3A" target="_jyw70CQ7Eea-KrJOsR6g3A">
+            <trigger xmi:type="uml:Trigger" xmi:id="_sJT9wCRAEea-KrJOsR6g3A" event="_rMgXQCRAEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_PrEmECRBEea-KrJOsR6g3A" source="_jyw70CQ7Eea-KrJOsR6g3A" target="_eL5PYCQ6Eea-KrJOsR6g3A">
+            <trigger xmi:type="uml:Trigger" xmi:id="_gsL9sCRBEea-KrJOsR6g3A" event="_gfIZICRBEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_w4DIUCRBEea-KrJOsR6g3A" source="_jyw70CQ7Eea-KrJOsR6g3A" target="_jyw70CQ7Eea-KrJOsR6g3A">
+            <trigger xmi:type="uml:Trigger" xmi:id="_FnTloCRCEea-KrJOsR6g3A" event="_FYcqQCRCEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_I-CQ4CRCEea-KrJOsR6g3A" source="_jyw70CQ7Eea-KrJOsR6g3A" target="_0qXyICQ7Eea-KrJOsR6g3A">
+            <trigger xmi:type="uml:Trigger" xmi:id="_bLrtECRCEea-KrJOsR6g3A" event="_a_Td8CRCEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_etMsACRCEea-KrJOsR6g3A" guard="_1OS6YCRCEea-KrJOsR6g3A" source="_0qXyICQ7Eea-KrJOsR6g3A" target="_jyw70CQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_1OS6YCRCEea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_1OS6YSRCEea-KrJOsR6g3A" value="quantidade>0"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="__X3ycCRCEea-KrJOsR6g3A" name="mostrarMensagemSucesso" specification="_-vSvgCRCEea-KrJOsR6g3A"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_uji5oCRCEea-KrJOsR6g3A" event="_uM-MsCRCEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_KWliwCRDEea-KrJOsR6g3A" source="_0qXyICQ7Eea-KrJOsR6g3A" target="_jyw70CQ7Eea-KrJOsR6g3A">
+            <trigger xmi:type="uml:Trigger" xmi:id="_Ri1HACRDEea-KrJOsR6g3A" event="_NYiQ0CRDEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_U_bwwCRDEea-KrJOsR6g3A" guard="_pgjrcCRDEea-KrJOsR6g3A" source="_0qXyICQ7Eea-KrJOsR6g3A" target="_0qXyICQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_pgjrcCRDEea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_pgjrcSRDEea-KrJOsR6g3A" value="quantidade&lt;=0"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_vgnwcCRDEea-KrJOsR6g3A" name="mostrarMensagemErro" specification="_vVih0CRDEea-KrJOsR6g3A"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_ljLP4CRDEea-KrJOsR6g3A" event="_uM-MsCRCEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_XS82ECREEea-KrJOsR6g3A" source="_jyw70CQ7Eea-KrJOsR6g3A" target="_9MouICQ7Eea-KrJOsR6g3A">
+            <trigger xmi:type="uml:Trigger" xmi:id="_dfB90CREEea-KrJOsR6g3A" event="_KaIJgCREEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_pIJWACREEea-KrJOsR6g3A" guard="_8T0gsCREEea-KrJOsR6g3A" source="_9MouICQ7Eea-KrJOsR6g3A" target="_jyw70CQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_8T0gsCREEea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_8T0gsSREEea-KrJOsR6g3A" value="quantidade>0"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_NMbckCRFEea-KrJOsR6g3A" name="mostrarMensagemSucesso" specification="_-vSvgCRCEea-KrJOsR6g3A"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_1fcC0CREEea-KrJOsR6g3A" event="_CELD0CRHEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_Vpw1QCRFEea-KrJOsR6g3A" guard="_jzX0QCRFEea-KrJOsR6g3A" source="_9MouICQ7Eea-KrJOsR6g3A" target="_jyw70CQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_jzX0QCRFEea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_jzX0QSRFEea-KrJOsR6g3A" value="quantidade>0"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_yh8hgCRFEea-KrJOsR6g3A" name="mostrarMensagemSucesso" specification="_-vSvgCRCEea-KrJOsR6g3A"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_g8GFICRFEea-KrJOsR6g3A" event="_uM-MsCRCEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_-tt60CRFEea-KrJOsR6g3A" source="_9MouICQ7Eea-KrJOsR6g3A" target="_jyw70CQ7Eea-KrJOsR6g3A">
+            <trigger xmi:type="uml:Trigger" xmi:id="_DWmKcCRGEea-KrJOsR6g3A" event="_NYiQ0CRDEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_KaHQgCRGEea-KrJOsR6g3A" guard="_nPW9gCRGEea-KrJOsR6g3A" source="_9MouICQ7Eea-KrJOsR6g3A" target="_9MouICQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_nPW9gCRGEea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_nPW9gSRGEea-KrJOsR6g3A" value="quantidade&lt;=0"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_rz778CRGEea-KrJOsR6g3A" name="mostrarMensagemErro" specification="_vVih0CRDEea-KrJOsR6g3A"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_jv-FgCRGEea-KrJOsR6g3A" event="_uM-MsCRCEea-KrJOsR6g3A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_uJIRsCRGEea-KrJOsR6g3A" guard="_FkNcECRHEea-KrJOsR6g3A" source="_9MouICQ7Eea-KrJOsR6g3A" target="_9MouICQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_FkNcECRHEea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_FkNcESRHEea-KrJOsR6g3A" value="quantidade&lt;=0"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_JX_2wCRHEea-KrJOsR6g3A" name="mostrarMensagemErro" specification="_vVih0CRDEea-KrJOsR6g3A"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_CTiVgCRHEea-KrJOsR6g3A" event="_CELD0CRHEea-KrJOsR6g3A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_dlZ3ICQ6Eea-KrJOsR6g3A" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_eL5PYCQ6Eea-KrJOsR6g3A" name="ListandoEstoques" stateInvariant="_yeWb8CQ6Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_yeWb8CQ6Eea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_yeWb8SQ6Eea-KrJOsR6g3A" value="estado=Estado::ListandoEstoques"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_jyw70CQ7Eea-KrJOsR6g3A" name="GerenciandoItens" stateInvariant="_v5CKECQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_v5CKECQ7Eea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_v5CKESQ7Eea-KrJOsR6g3A" value="estado=Estado::GerenciandoItens"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_0qXyICQ7Eea-KrJOsR6g3A" name="AdicionandoItem" stateInvariant="_8i-GECQ7Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_8i-GECQ7Eea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_8i-GESQ7Eea-KrJOsR6g3A" value="estado=Estado::AdicionandoItem"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_9MouICQ7Eea-KrJOsR6g3A" name="IncrementandoDecrementandoQuantidade" stateInvariant="_gQHfACQ8Eea-KrJOsR6g3A">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_gQHfACQ8Eea-KrJOsR6g3A">
+              <specification xmi:type="uml:LiteralString" xmi:id="_gQHfASQ8Eea-KrJOsR6g3A" value="estado=Estado::IncrementandoDecrementandoQuantidade"/>
+            </ownedRule>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_q8Q70CRAEea-KrJOsR6g3A" name="gerenciarItensNoEstoque"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gSuU0CRBEea-KrJOsR6g3A" name="voltar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FM-aECRCEea-KrJOsR6g3A" name="buscar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_a0DQMCRCEea-KrJOsR6g3A" name="adicionarItemExistente"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uBbEACRCEea-KrJOsR6g3A" name="adicionar">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uBbEASRCEea-KrJOsR6g3A" name="quantidade">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-vSvgCRCEea-KrJOsR6g3A" name="mostrarMensagemSucesso" method="__X3ycCRCEea-KrJOsR6g3A _NMbckCRFEea-KrJOsR6g3A _yh8hgCRFEea-KrJOsR6g3A"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RPkMwCRDEea-KrJOsR6g3A" name="cancelar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vVih0CRDEea-KrJOsR6g3A" name="mostrarMensagemErro" method="_vgnwcCRDEea-KrJOsR6g3A _rz778CRGEea-KrJOsR6g3A _JX_2wCRHEea-KrJOsR6g3A"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KS-_sCREEea-KrJOsR6g3A" name="gerenciarItemExistente"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_dAb9UCREEea-KrJOsR6g3A" name="gerenciarItemExistente"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_05rDUCREEea-KrJOsR6g3A" name="remover">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_05rDUSREEea-KrJOsR6g3A" name="quantidade">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gmkhECRFEea-KrJOsR6g3A" name="adicionar">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gmkhESRFEea-KrJOsR6g3A" name="quantidade">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_B07t8CRHEea-KrJOsR6g3A" name="remover">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_B07t8SRHEea-KrJOsR6g3A" name="quantidade">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_FV4_ICQ6Eea-KrJOsR6g3A" name="Estado">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Kc1q0CQ6Eea-KrJOsR6g3A" name="ListandoEstoques"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_OjLOECQ6Eea-KrJOsR6g3A" name="GerenciandoItens"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_UXxp8CQ6Eea-KrJOsR6g3A" name="AdicionandoItem"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_WFo58CQ6Eea-KrJOsR6g3A" name="IncrementandoDecrementandoQuantidade"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_rMgXQCRAEea-KrJOsR6g3A" name="EventoGerenciarItensNoEstoque" operation="_q8Q70CRAEea-KrJOsR6g3A"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_gfIZICRBEea-KrJOsR6g3A" name="EventoVoltar" operation="_gSuU0CRBEea-KrJOsR6g3A"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_FYcqQCRCEea-KrJOsR6g3A" name="EventoBuscar" operation="_FM-aECRCEea-KrJOsR6g3A"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_a_Td8CRCEea-KrJOsR6g3A" name="EventoAdicionarItemExistente" operation="_a0DQMCRCEea-KrJOsR6g3A"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_uM-MsCRCEea-KrJOsR6g3A" name="EventoAdicionar" operation="_uBbEACRCEea-KrJOsR6g3A"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_NYiQ0CRDEea-KrJOsR6g3A" name="EventoCancelar" operation="_RPkMwCRDEea-KrJOsR6g3A"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_KaIJgCREEea-KrJOsR6g3A" name="EventoGerenciarItemExistente" operation="_KS-_sCREEea-KrJOsR6g3A"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_CELD0CRHEea-KrJOsR6g3A" name="EventoRemover" operation="_B07t8CRHEea-KrJOsR6g3A"/>
+  </packagedElement>
+</uml:Model>
