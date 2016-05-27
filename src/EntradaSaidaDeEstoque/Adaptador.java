@@ -1,0 +1,22 @@
+package EntradaSaidaDeEstoque;
+
+public interface Adaptador {
+
+	void executarEventoGerenciarItensNoEstoque(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	void executarEventoGerenciarItemExistente(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	void executarEventoRemover(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	void executarEventoAdicionar(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	void executarEventoCancelar(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	void executarEventoBuscar(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	void executarEventoVoltar(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	void executarEventoAdicionarItemExistente(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque);
+
+	
+}
