@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import GerenciamentoDeEstoque.Estado;
-
 public class AdaptadorInterfaceWeb implements Adaptador {
 
 	public static WebDriver driver;
@@ -63,6 +61,9 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public void executarEventoRemover(ContextoEntradaSaidaDeEstoque contexto) {
 		// TODO Auto-generated method stub
 		try {
+			WebElement nome = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoQuantidade")));
+			nome.sendKeys(conhecimento.get("dado.valido.quantidade"));
+			
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkRemover"))).click();
 			Thread.sleep(3000);
 			
@@ -89,7 +90,24 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkAdicionar"))).click();
 			Thread.sleep(3000);
 			
-			Estado aux = contexto.estado;
+			boolean hasRemoveButton = driver.findElements(By.cssSelector(conhecimento.get("seletor.linkRemover"))).size() > 0;
+			Estado aux;
+			
+			if(hasRemoveButton) {
+				aux = Estado.IncrementandoDecrementandoQuantidade;
+			} else {
+				aux = Estado.AdicionandoItem;
+				
+				WebElement item = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoItem")));
+				item.sendKeys(conhecimento.get("dado.valido.item"));
+				
+				Thread.sleep(1000);
+				
+				driver.findElement(By.cssSelector(conhecimento.get("seletor.resultadoItemAdicao"))).click();
+			}
+			
+			WebElement qt = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoQuantidade")));
+			qt.sendKeys(conhecimento.get("dado.valido.quantidade"));
 			
 			if(contexto.quantidade > 0) {
 				Assert.assertEquals("O título mudou para o da tela de gerenciamento de itens? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
@@ -100,7 +118,6 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 				Assert.assertTrue("A mensagem de sucesso foi exibida? ", driver.getPageSource().contains(conhecimento.get("mensagem.adicionarErro")));
 				contexto.estado = aux;
 			}
-			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Assert.fail(e.getMessage());
@@ -124,7 +141,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	}
 
 	@Override
-	public void executarEventoBuscar(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque) {
+	public void executarEventoBuscar(ContextoEntradaSaidaDeEstoque contexto) {
 		// TODO Auto-generated method stub
 		try {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.campoConsulta")))
@@ -132,25 +149,45 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkPesquisar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoque.toString()), driver.getTitle());
+			Assert.assertEquals("O título continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoques.toString()), driver.getTitle());
 			Assert.assertTrue("Os resultados foram exibidos? ", driver.findElement(By.cssSelector(conhecimento.get("seletor.item"))).isDisplayed());
 			
-			contexto.estado = Estado.ListandoEstoque;
+			contexto.estado = Estado.ListandoEstoques;
 		} catch (Exception e) {
 			Assert.fail(e.getMessage());
 		}
 	}
 
 	@Override
-	public void executarEventoVoltar(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque) {
+	public void executarEventoVoltar(ContextoEntradaSaidaDeEstoque contexto) {
 		// TODO Auto-generated method stub
-		
+		try {
+			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCancelar"))).click();
+			Thread.sleep(3000);
+			
+			Assert.assertEquals("O título mudou para o da tela de lista de estoques? ", conhecimento.get("titulo." + Estado.ListandoEstoques.toString()), driver.getTitle());
+			
+			contexto.estado = Estado.ListandoEstoques;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
+		}
 	}
 
 	@Override
-	public void executarEventoAdicionarItemExistente(ContextoEntradaSaidaDeEstoque contextoEntradaSaidaDeEstoque) {
+	public void executarEventoAdicionarItemExistente(ContextoEntradaSaidaDeEstoque contexto) {
 		// TODO Auto-generated method stub
-		
+		try {
+			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkIncrementarDecrementar"))).click();
+			Thread.sleep(3000);
+			
+			Assert.assertEquals("O título mudou para o da tela de gerenciamento de item existente? ", conhecimento.get("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString()), driver.getTitle());
+			
+			contexto.estado = Estado.IncrementandoDecrementandoQuantidade;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
+		}
 	}
 	
 

@@ -21,8 +21,10 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 		mapa.put("seletor.linkRemover", ".button-decrement");
 		mapa.put("seletor.linkAdicionar", ".button-increment");
 		mapa.put("seletor.linkCancelar", ".button-cancel");
+		mapa.put("seletor.resultadoItemAdicao", ".choser .item");
 		
-		mapa.put("seletor.campoTitulo", "input[name='titulo']");
+		mapa.put("seletor.campoQuantidade", "input[name='quantidade']");
+		mapa.put("seletor.campoItem", "input[name='item']");
 		
 		mapa.put("seletor.campoConsulta", "input[type='search']");
 		mapa.put("seletor.item", ".item");
@@ -32,7 +34,8 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 		mapa.put("mensagem.adicionarSucesso", "Item adicionado com sucesso");
 		mapa.put("mensagem.adicioanrErro", "Erro ao adicionar item");
 		
-		mapa.put("dado.valido.titulo", "varejo");
+		mapa.put("dado.valido.quantidade", "10");
+		mapa.put("dado.valido.item", "camiseta");
 		
 		mapa.put("dado.invalido.titulo", "");
 		
