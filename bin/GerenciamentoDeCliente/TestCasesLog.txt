@@ -9,54 +9,54 @@
 ### satisfied test goals
 
  - satisfied: (test goal #1 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::EditandoCliente
-   to node tmp1
-   triggered by EventoEditarErro
-   with condition truth: true
-((dadosValidos = false))
- - satisfied: (test goal #2 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::CriandoCliente
-   to node tmp4
-   triggered by EventoCriarErro
-   with condition truth: true
-((dadosValidos = false))
- - satisfied: (test goal #3 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::CriandoCliente
-   to node MaquinaEstadosGerenciamentoDeItem::Region1::ListandoClientes
-   triggered by EventoCancelarCriacao
- - satisfied: (test goal #4 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::EditandoCliente
-   to node MaquinaEstadosGerenciamentoDeItem::Region1::ListandoClientes
-   triggered by EventoCancelarEdicao
- - satisfied: (test goal #5 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::EditandoCliente
-   to node tmp2
-   triggered by EventoEditarSucesso
-   with condition truth: true
-((dadosValidos = true))
- - satisfied: (test goal #6 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::CriandoCliente
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::CriandoCliente
    to node tmp3
    triggered by EventoCriarSucesso
    with condition truth: true
 ((dadosValidos = true))
+ - satisfied: (test goal #2 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::EditandoCliente
+   to node MaquinaEstadosGerenciamentoDeCliente::Region1::ListandoClientes
+   triggered by EventoCancelarEdicao
+ - satisfied: (test goal #3 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::CriandoCliente
+   to node MaquinaEstadosGerenciamentoDeCliente::Region1::ListandoClientes
+   triggered by EventoCancelarCriacao
+ - satisfied: (test goal #4 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::EditandoCliente
+   to node tmp1
+   triggered by EventoEditarErro
+   with condition truth: true
+((dadosValidos = false))
+ - satisfied: (test goal #5 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::CriandoCliente
+   to node tmp4
+   triggered by EventoCriarErro
+   with condition truth: true
+((dadosValidos = false))
+ - satisfied: (test goal #6 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::EditandoCliente
+   to node tmp2
+   triggered by EventoEditarSucesso
+   with condition truth: true
+((dadosValidos = true))
  - satisfied: (test goal #7 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::ListandoClientes
-   to node MaquinaEstadosGerenciamentoDeItem::Region1::CriandoCliente
-   triggered by EventoCriar
- - satisfied: (test goal #8 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::ListandoClientes
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::ListandoClientes
    to node tmp5
    triggered by EventoBuscar
- - satisfied: (test goal #9 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::ListandoClientes
-   to node MaquinaEstadosGerenciamentoDeItem::Region1::EditandoCliente
+ - satisfied: (test goal #8 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::ListandoClientes
+   to node MaquinaEstadosGerenciamentoDeCliente::Region1::EditandoCliente
    triggered by EventoEditar
- - satisfied: (test goal #10 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::ListandoClientes
+ - satisfied: (test goal #9 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::ListandoClientes
    to node tmp6
    triggered by EventoDeletar
+ - satisfied: (test goal #10 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::ListandoClientes
+   to node MaquinaEstadosGerenciamentoDeCliente::Region1::CriandoCliente
+   triggered by EventoCriar
  - satisfied: (test goal #11 - traversed transition) 
-   from node MaquinaEstadosGerenciamentoDeItem::Region1::inicio
-   to node MaquinaEstadosGerenciamentoDeItem::Region1::ListandoClientes
+   from node MaquinaEstadosGerenciamentoDeCliente::Region1::inicio
+   to node MaquinaEstadosGerenciamentoDeCliente::Region1::ListandoClientes
    triggered by default

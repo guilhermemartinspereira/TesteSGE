@@ -26,7 +26,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	}
 	
 	@Override
-	public void executarEventoCriar(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoCriar(ContextoGerenciamentoDeEstoque contexto) {
 		// TODO Auto-generated method stub
 		try {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCriar"))).click();
@@ -42,12 +42,12 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	}
 
 	@Override
-	public void executarEventoCancelarCriacao(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoCancelarCriacao(ContextoGerenciamentoDeEstoque contexto) {
 		this.executarEventoCancelar(contexto);
 	}
 
 	@Override
-	public void executarEventoEditar(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoEditar(ContextoGerenciamentoDeEstoque contexto) {
 		// TODO Auto-generated method stub
 		try {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkEditar"))).click();
@@ -63,32 +63,32 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	}
 
 	@Override
-	public void executarEventoCancelarEdicao(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoCancelarEdicao(ContextoGerenciamentoDeEstoque contexto) {
 		this.executarEventoCancelar(contexto);
 	}
 
 	@Override
-	public void executarEventoCriarErro(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoCriarErro(ContextoGerenciamentoDeEstoque contexto) {
 		this.executarEventoSalvarDadosErro(contexto, Estado.CriandoEstoque, "mensagem.criarErro");
 	}
 
 	@Override
-	public void executarEventoCriarSucesso(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoCriarSucesso(ContextoGerenciamentoDeEstoque contexto) {
 		this.executarEventoSalvarDadosSucesso(contexto, "mensagem.criarSucesso");
 	}
 
 	@Override
-	public void executarEventoEditarErro(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoEditarErro(ContextoGerenciamentoDeEstoque contexto) {
 		this.executarEventoSalvarDadosErro(contexto, Estado.EditandoEstoque, "mensagem.editarErro");
 	}
 
 	@Override
-	public void executarEventoEditarSucesso(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoEditarSucesso(ContextoGerenciamentoDeEstoque contexto) {
 		this.executarEventoSalvarDadosSucesso(contexto, "mensagem.editarSucesso");
 	}
 
 	@Override
-	public void executarEventoBuscar(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoBuscar(ContextoGerenciamentoDeEstoque contexto) {
 		try {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.campoConsulta")))
 				.sendKeys(conhecimento.get("dado.consulta"));
@@ -105,7 +105,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	}
 
 	@Override
-	public void executarEventoDeletar(ContextoGerenciamentoDeItem contexto) {
+	public void executarEventoDeletar(ContextoGerenciamentoDeEstoque contexto) {
 		try {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkDeletar"))).click();
 			Thread.sleep(3000);
@@ -120,7 +120,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 		}
 	}
 
-	private void executarEventoCancelar(ContextoGerenciamentoDeItem contexto) {
+	private void executarEventoCancelar(ContextoGerenciamentoDeEstoque contexto) {
 		// TODO Auto-generated method stub
 		try {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCancelar"))).click();
@@ -135,7 +135,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 		}
 	}
 	
-	private void executarEventoSalvarDadosErro(ContextoGerenciamentoDeItem contexto, Estado estado, String seletorMensagem) {
+	private void executarEventoSalvarDadosErro(ContextoGerenciamentoDeEstoque contexto, Estado estado, String seletorMensagem) {
 		try {
 			Assert.assertFalse("Os dados são válidos?", contexto.dadosValidos.booleanValue());
 			
@@ -156,7 +156,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 		}
 	}
 	
-	private void executarEventoSalvarDadosSucesso(ContextoGerenciamentoDeItem contexto, String seletorMensagem) {
+	private void executarEventoSalvarDadosSucesso(ContextoGerenciamentoDeEstoque contexto, String seletorMensagem) {
 		try {
 			Assert.assertTrue("Os dados são válidos?", contexto.dadosValidos.booleanValue());
 			

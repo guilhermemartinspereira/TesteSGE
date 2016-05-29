@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fzEmABesEeaRmvQzRRFWvg" name="">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_f4lYIBesEeaRmvQzRRFWvg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_tjO4UBeuEeaRmvQzRRFWvg" name="GerenciamentoDeCliente">
+    <packagedElement xmi:type="uml:Class" xmi:id="_yWhBIBeuEeaRmvQzRRFWvg" name="ContextoGerenciamentoDeCliente">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Cd7UIBewEeaRmvQzRRFWvg" name="dadosValidos">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jkV7YBewEeaRmvQzRRFWvg" name="estado" type="_66LEQBeuEeaRmvQzRRFWvg"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_fz0M4BesEeaRmvQzRRFWvg" name="MaquinaEstadosGerenciamentoDeCliente">
+        <region xmi:type="uml:Region" xmi:id="_f0HH0BesEeaRmvQzRRFWvg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_y0BHYBesEeaRmvQzRRFWvg" name="criar" isLeaf="true" source="_gsh9kBesEeaRmvQzRRFWvg" target="_hFsEcBesEeaRmvQzRRFWvg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_Du5-YBexEeaRmvQzRRFWvg" event="_yaNG8BexEeaRmvQzRRFWvg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_7qR9cBesEeaRmvQzRRFWvg" name="editar" isLeaf="true" source="_gsh9kBesEeaRmvQzRRFWvg" target="_iACz4BesEeaRmvQzRRFWvg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_dDo1MBe1EeaRmvQzRRFWvg" event="_c29rIBe1EeaRmvQzRRFWvg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_UbA2sBeuEeaRmvQzRRFWvg" source="_TP6VgBeuEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_XMPZcBe0EeaRmvQzRRFWvg" name="cancelarCriacao" isLeaf="true" source="_hFsEcBesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_jP5YkBe0EeaRmvQzRRFWvg" event="_lbefUBe0EeaRmvQzRRFWvg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_yO_YoBe1EeaRmvQzRRFWvg" name="cancelarEdicao" isLeaf="true" source="_iACz4BesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <trigger xmi:type="uml:Trigger" xmi:id="__fLcUBe1EeaRmvQzRRFWvg" event="__SK7EBe1EeaRmvQzRRFWvg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_Nh4iEBe2EeaRmvQzRRFWvg" name="editarErro" isLeaf="true" guard="_T9I40Be3EeaRmvQzRRFWvg" source="_iACz4BesEeaRmvQzRRFWvg" target="_iACz4BesEeaRmvQzRRFWvg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_T9I40Be3EeaRmvQzRRFWvg">
+              <specification xmi:type="uml:LiteralString" xmi:id="_T9I40Re3EeaRmvQzRRFWvg" value="dadosValidos=false"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_ItyEcBe3EeaRmvQzRRFWvg" name="MostrarMensagemErro" specification="_EJc9oBe3EeaRmvQzRRFWvg"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_xQ4VIBe2EeaRmvQzRRFWvg" event="_wxlKABe2EeaRmvQzRRFWvg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_-YW2kBhXEeaPkPy0HRxdBw" name="editarSucesso" isLeaf="true" guard="_PVTf4BhYEeaPkPy0HRxdBw" source="_iACz4BesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_PVTf4BhYEeaPkPy0HRxdBw">
+              <specification xmi:type="uml:LiteralString" xmi:id="_PVTf4RhYEeaPkPy0HRxdBw" value="dadosValidos=true"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_MRd7cBhYEeaPkPy0HRxdBw" name="MostrarMensagemSucesso" specification="_qsmdoBhXEeaPkPy0HRxdBw"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_Scky0BhYEeaPkPy0HRxdBw" event="_dNAE8BhXEeaPkPy0HRxdBw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_tQd2oBhZEeaPkPy0HRxdBw" name="criarSucesso" guard="_DPiWABhaEeaPkPy0HRxdBw" source="_hFsEcBesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_DPiWABhaEeaPkPy0HRxdBw">
+              <specification xmi:type="uml:LiteralString" xmi:id="_DPiWARhaEeaPkPy0HRxdBw" value="dadosValidos=true"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_Kw1kQBhaEeaPkPy0HRxdBw" name="MostrarMensagemSucesso" specification="_qsmdoBhXEeaPkPy0HRxdBw"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_65jigBhZEeaPkPy0HRxdBw" event="_6fVrsBhZEeaPkPy0HRxdBw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_Zc_2sBhaEeaPkPy0HRxdBw" name="criarErro" guard="_jrPMUBhaEeaPkPy0HRxdBw" source="_hFsEcBesEeaRmvQzRRFWvg" target="_hFsEcBesEeaRmvQzRRFWvg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_jrPMUBhaEeaPkPy0HRxdBw">
+              <specification xmi:type="uml:LiteralString" xmi:id="_jrPMURhaEeaPkPy0HRxdBw" value="dadosValidos=false"/>
+            </ownedRule>
+            <effect xmi:type="uml:FunctionBehavior" xmi:id="_nD4jIBhaEeaPkPy0HRxdBw" name="MostrarMensagemErro" specification="_EJc9oBe3EeaRmvQzRRFWvg"/>
+            <trigger xmi:type="uml:Trigger" xmi:id="_hk_RgBhaEeaPkPy0HRxdBw" event="_hPGhEBhaEeaPkPy0HRxdBw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_84jTYCXOEealr4iBEX9Qlg" source="_gsh9kBesEeaRmvQzRRFWvg" target="_7RZ2wCXLEealr4iBEX9Qlg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_XNZgMCXPEealr4iBEX9Qlg" event="_M7hAsCXPEealr4iBEX9Qlg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="__Ks8MCXOEealr4iBEX9Qlg" source="_7RZ2wCXLEealr4iBEX9Qlg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_LCcw0CXQEealr4iBEX9Qlg" event="_KcCRECXQEealr4iBEX9Qlg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_AT4x0CXPEealr4iBEX9Qlg" source="_7RZ2wCXLEealr4iBEX9Qlg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_Zm-KMCXQEealr4iBEX9Qlg" event="_ZWYJcCXQEealr4iBEX9Qlg"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_gsh9kBesEeaRmvQzRRFWvg" name="ListandoConsignacoes" isLeaf="true" stateInvariant="_dLrwMBewEeaRmvQzRRFWvg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_dLrwMBewEeaRmvQzRRFWvg">
+              <specification xmi:type="uml:LiteralString" xmi:id="_eYN0wBewEeaRmvQzRRFWvg" value="estado=Estado::ListandoConsignacoes"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_hFsEcBesEeaRmvQzRRFWvg" name="CriandoConsignacao" isLeaf="true" stateInvariant="_LWaPIBhdEeaPkPy0HRxdBw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_0hmtwBewEeaRmvQzRRFWvg">
+              <specification xmi:type="uml:LiteralString" xmi:id="_0hmtwRewEeaRmvQzRRFWvg" value="estado=Estado::CriandoItem"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_LWaPIBhdEeaPkPy0HRxdBw">
+              <specification xmi:type="uml:LiteralString" xmi:id="_LWaPIRhdEeaPkPy0HRxdBw" value="estado=Estado::CriandoConsignacao"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_iACz4BesEeaRmvQzRRFWvg" name="EditandoConsignacao" isLeaf="true" stateInvariant="_bK0jEBhdEeaPkPy0HRxdBw">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_3r77wBewEeaRmvQzRRFWvg">
+              <specification xmi:type="uml:LiteralString" xmi:id="_3r77wRewEeaRmvQzRRFWvg" value="estado=Estado::EditandoItem"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_bK0jEBhdEeaPkPy0HRxdBw">
+              <specification xmi:type="uml:LiteralString" xmi:id="_bK0jERhdEeaPkPy0HRxdBw" value="estado=Estado::EditandoConsignacao"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_TP6VgBeuEeaRmvQzRRFWvg" name="inicio"/>
+          <subvertex xmi:type="uml:State" xmi:id="_7RZ2wCXLEealr4iBEX9Qlg" name="DandoBaixaEmConsignacao" stateInvariant="_6a-voCXMEealr4iBEX9Qlg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_6a-voCXMEealr4iBEX9Qlg"/>
+          </subvertex>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hGTWMBexEeaRmvQzRRFWvg" name="criar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qMnTEBe0EeaRmvQzRRFWvg" name="cancelarCriacao"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_crbJgBe1EeaRmvQzRRFWvg" name="editar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__Fyr8Be1EeaRmvQzRRFWvg" name="cancelarEdicao"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_whVHgBe2EeaRmvQzRRFWvg" name="editarErro">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YT9Y4BlIEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_YT9Y4RlIEeabCZ6m0M899g"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EJc9oBe3EeaRmvQzRRFWvg" name="mostrarMensagemErro" method="_ItyEcBe3EeaRmvQzRRFWvg _nD4jIBhaEeaPkPy0HRxdBw"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gFDQIBhXEeaPkPy0HRxdBw" name="editarSucesso">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SlahsBlIEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_SlahsRlIEeabCZ6m0M899g" value="true"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qsmdoBhXEeaPkPy0HRxdBw" name="mostrarMensagemSucesso" method="_MRd7cBhYEeaPkPy0HRxdBw _Kw1kQBhaEeaPkPy0HRxdBw"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4rH8EBhZEeaPkPy0HRxdBw" name="criarSucesso">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4WiaABlHEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_4WiaARlHEeabCZ6m0M899g" value="true"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_g67n4BhaEeaPkPy0HRxdBw" name="criarErro">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_stOqABlGEeabCZ6m0M899g" name="dadosValidos">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_stOqARlGEeabCZ6m0M899g"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_eiFrwBhbEeaPkPy0HRxdBw" name="buscar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lUTxABhcEeaPkPy0HRxdBw" name="deletar"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3SAFoBhcEeaPkPy0HRxdBw" name="mostrarResultados"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Wryn8CXPEealr4iBEX9Qlg" name="darBaixa"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KBFacCXQEealr4iBEX9Qlg" name="cancelarBaixaEmConsignacao"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZLtKgCXQEealr4iBEX9Qlg" name="darBaixaSucesso"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_66LEQBeuEeaRmvQzRRFWvg" name="Estado">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-i9v4BeuEeaRmvQzRRFWvg" name="ListandoClientes"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="__mGn4BeuEeaRmvQzRRFWvg" name="CriandoCliente"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_BsKVcBevEeaRmvQzRRFWvg" name="EditandoCliente"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_yaNG8BexEeaRmvQzRRFWvg" name="EventoCriar" operation="_hGTWMBexEeaRmvQzRRFWvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_lbefUBe0EeaRmvQzRRFWvg" name="EventoCancelarCriacao" operation="_qMnTEBe0EeaRmvQzRRFWvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_c29rIBe1EeaRmvQzRRFWvg" name="EventoEditar" operation="_crbJgBe1EeaRmvQzRRFWvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="__SK7EBe1EeaRmvQzRRFWvg" name="EventoCancelarEdicao" operation="__Fyr8Be1EeaRmvQzRRFWvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_wxlKABe2EeaRmvQzRRFWvg" name="EventoEditarErro" operation="_whVHgBe2EeaRmvQzRRFWvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_dNAE8BhXEeaPkPy0HRxdBw" name="EventoEditarSucesso" operation="_gFDQIBhXEeaPkPy0HRxdBw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_6fVrsBhZEeaPkPy0HRxdBw" name="EventoCriarSucesso" operation="_4rH8EBhZEeaPkPy0HRxdBw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_hPGhEBhaEeaPkPy0HRxdBw" name="EventoCriarErro" operation="_g67n4BhaEeaPkPy0HRxdBw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_fWDfUBhbEeaPkPy0HRxdBw" name="EventoBuscar" operation="_eiFrwBhbEeaPkPy0HRxdBw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_lqDXgBhcEeaPkPy0HRxdBw" name="EventoDeletar" operation="_lUTxABhcEeaPkPy0HRxdBw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_M7hAsCXPEealr4iBEX9Qlg" name="EventoDarBaixa" operation="_Wryn8CXPEealr4iBEX9Qlg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_KcCRECXQEealr4iBEX9Qlg" name="EventoCancelarBaixaEmConsignacao" operation="_KBFacCXQEealr4iBEX9Qlg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_ZWYJcCXQEealr4iBEX9Qlg" name="EventoDarBaixaSucesso" operation="_ZLtKgCXQEealr4iBEX9Qlg"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Nbf7EBhXEeaPkPy0HRxdBw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NbiXUBhXEeaPkPy0HRxdBw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

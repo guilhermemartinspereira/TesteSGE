@@ -13,7 +13,7 @@ public class TestCases{
 	@Test
 	public void test1()
 	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
 		Boolean dadosValidos2 = false;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		oTestObject.handleEvent("EventoEditar");
@@ -27,19 +27,7 @@ public class TestCases{
 	@Test
 	public void test2()
 	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
-		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoEditar");
-		assertEquals(true, (oTestObject.estado == Estado.EditandoEstoque));
-		oTestObject.handleEvent("EventoCancelarEdicao");
-		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		
-	}
-	
-	@Test
-	public void test3()
-	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
 		Boolean dadosValidos2 = true;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		oTestObject.handleEvent("EventoEditar");
@@ -51,21 +39,9 @@ public class TestCases{
 	}
 	
 	@Test
-	public void test4()
+	public void test3()
 	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
-		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoCriar");
-		assertEquals(true, (oTestObject.estado == Estado.CriandoEstoque));
-		oTestObject.handleEvent("EventoCancelarCriacao");
-		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		
-	}
-	
-	@Test
-	public void test5()
-	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
 		Boolean dadosValidos2 = false;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		oTestObject.handleEvent("EventoCriar");
@@ -77,9 +53,33 @@ public class TestCases{
 	}
 	
 	@Test
+	public void test4()
+	{
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
+		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
+		oTestObject.handleEvent("EventoCriar");
+		assertEquals(true, (oTestObject.estado == Estado.CriandoEstoque));
+		oTestObject.handleEvent("EventoCancelarCriacao");
+		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
+		
+	}
+	
+	@Test
+	public void test5()
+	{
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
+		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
+		oTestObject.handleEvent("EventoEditar");
+		assertEquals(true, (oTestObject.estado == Estado.EditandoEstoque));
+		oTestObject.handleEvent("EventoCancelarEdicao");
+		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
+		
+	}
+	
+	@Test
 	public void test6()
 	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
 		Boolean dadosValidos2 = true;
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		oTestObject.handleEvent("EventoCriar");
@@ -93,9 +93,9 @@ public class TestCases{
 	@Test
 	public void test7()
 	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoDeletar");
+		oTestObject.handleEvent("EventoBuscar");
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		
 	}
@@ -103,9 +103,9 @@ public class TestCases{
 	@Test
 	public void test8()
 	{
-		ContextoGerenciamentoDeItem oTestObject = new ContextoGerenciamentoDeItem();
+		ContextoGerenciamentoDeEstoque oTestObject = new ContextoGerenciamentoDeEstoque();
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
-		oTestObject.handleEvent("EventoBuscar");
+		oTestObject.handleEvent("EventoDeletar");
 		assertEquals(true, (oTestObject.estado == Estado.ListandoEstoque));
 		
 	}

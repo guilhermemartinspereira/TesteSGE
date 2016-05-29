@@ -1,6 +1,6 @@
 package GerenciamentoDeEstoque;
 
-public class ContextoGerenciamentoDeItem {
+public class ContextoGerenciamentoDeEstoque {
 
 	public Estado estado = Estado.ListandoEstoque;
 	public Boolean dadosValidos;

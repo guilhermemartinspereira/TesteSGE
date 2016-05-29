@@ -3,13 +3,13 @@
   <packageImport xmi:id="_f4lYIBesEeaRmvQzRRFWvg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Package" xmi:id="_tjO4UBeuEeaRmvQzRRFWvg" name="GerenciamentoDeCliente">
-    <packagedElement xmi:type="uml:Class" xmi:id="_yWhBIBeuEeaRmvQzRRFWvg" name="ContextoGerenciamentoDeCliente">
+  <packagedElement xmi:type="uml:Package" xmi:id="_tjO4UBeuEeaRmvQzRRFWvg" name="GerenciamentoDeConsignacao">
+    <packagedElement xmi:type="uml:Class" xmi:id="_yWhBIBeuEeaRmvQzRRFWvg" name="ContextoGerenciamentoDeConsignacao">
       <ownedAttribute xmi:id="_Cd7UIBewEeaRmvQzRRFWvg" name="dadosValidos">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
       <ownedAttribute xmi:id="_jkV7YBewEeaRmvQzRRFWvg" name="estado" type="_66LEQBeuEeaRmvQzRRFWvg"/>
-      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_fz0M4BesEeaRmvQzRRFWvg" name="MaquinaEstadosGerenciamentoDeCliente">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_fz0M4BesEeaRmvQzRRFWvg" name="MaquinaEstadosGerenciamentoDeConsignacao">
         <region xmi:id="_f0HH0BesEeaRmvQzRRFWvg" name="Region1">
           <transition xmi:id="_y0BHYBesEeaRmvQzRRFWvg" name="criar" isLeaf="true" source="_gsh9kBesEeaRmvQzRRFWvg" target="_hFsEcBesEeaRmvQzRRFWvg">
             <trigger xmi:id="_Du5-YBexEeaRmvQzRRFWvg" event="_yaNG8BexEeaRmvQzRRFWvg"/>
@@ -57,11 +57,11 @@
               <specification xmi:type="uml:LiteralString" xmi:id="_OmJ-ERhcEeaPkPy0HRxdBw" value="dadosValidos=true"/>
             </ownedRule>
             <effect xmi:type="uml:FunctionBehavior" xmi:id="_3n1LsBhcEeaPkPy0HRxdBw" name="MostrarResultados" specification="_3SAFoBhcEeaPkPy0HRxdBw"/>
-            <trigger xmi:id="_hoc_wBhbEeaPkPy0HRxdBw" event="_fWDfUBhbEeaPkPy0HRxdBw"/>
+            <trigger xmi:id="_hoc_wBhbEeaPkPy0HRxdBw"/>
           </transition>
           <transition xmi:id="_a5uBcBhcEeaPkPy0HRxdBw" name="deletar" source="_gsh9kBesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
             <effect xmi:type="uml:FunctionBehavior" xmi:id="_qP6IUBhcEeaPkPy0HRxdBw" name="MostrarMensagemSucesso" specification="_qsmdoBhXEeaPkPy0HRxdBw"/>
-            <trigger xmi:id="_mKMQIBhcEeaPkPy0HRxdBw" event="_lqDXgBhcEeaPkPy0HRxdBw"/>
+            <trigger xmi:id="_mKMQIBhcEeaPkPy0HRxdBw"/>
           </transition>
           <subvertex xmi:type="uml:State" xmi:id="_gsh9kBesEeaRmvQzRRFWvg" name="ListandoClientes" isLeaf="true" stateInvariant="_dLrwMBewEeaRmvQzRRFWvg">
             <ownedRule xmi:id="_dLrwMBewEeaRmvQzRRFWvg">
@@ -117,14 +117,13 @@
           <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_stOqARlGEeabCZ6m0M899g"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:id="_eiFrwBhbEeaPkPy0HRxdBw" name="buscar"/>
-      <ownedOperation xmi:id="_lUTxABhcEeaPkPy0HRxdBw" name="deletar"/>
       <ownedOperation xmi:id="_3SAFoBhcEeaPkPy0HRxdBw" name="mostrarResultados" method="_3n1LsBhcEeaPkPy0HRxdBw"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_66LEQBeuEeaRmvQzRRFWvg" name="Estado">
-      <ownedLiteral xmi:id="_-i9v4BeuEeaRmvQzRRFWvg" name="ListandoClientes"/>
-      <ownedLiteral xmi:id="__mGn4BeuEeaRmvQzRRFWvg" name="CriandoCliente"/>
-      <ownedLiteral xmi:id="_BsKVcBevEeaRmvQzRRFWvg" name="EditandoCliente"/>
+      <ownedLiteral xmi:id="_-i9v4BeuEeaRmvQzRRFWvg" name="ListandoConsignacoes"/>
+      <ownedLiteral xmi:id="__mGn4BeuEeaRmvQzRRFWvg" name="CriandoConsignacao"/>
+      <ownedLiteral xmi:id="_euSUMCXOEealr4iBEX9Qlg" name="EditandoConsignacao"/>
+      <ownedLiteral xmi:id="_l6fcMCXOEealr4iBEX9Qlg" name="DandoBaixaEmConsignacao"/>
     </packagedElement>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_yaNG8BexEeaRmvQzRRFWvg" name="EventoCriar" operation="_hGTWMBexEeaRmvQzRRFWvg"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_lbefUBe0EeaRmvQzRRFWvg" name="EventoCancelarCriacao" operation="_qMnTEBe0EeaRmvQzRRFWvg"/>
@@ -134,8 +133,6 @@
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_dNAE8BhXEeaPkPy0HRxdBw" name="EventoEditarSucesso" operation="_gFDQIBhXEeaPkPy0HRxdBw"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_6fVrsBhZEeaPkPy0HRxdBw" name="EventoCriarSucesso" operation="_4rH8EBhZEeaPkPy0HRxdBw"/>
     <packagedElement xmi:type="uml:CallEvent" xmi:id="_hPGhEBhaEeaPkPy0HRxdBw" name="EventoCriarErro" operation="_g67n4BhaEeaPkPy0HRxdBw"/>
-    <packagedElement xmi:type="uml:CallEvent" xmi:id="_fWDfUBhbEeaPkPy0HRxdBw" name="EventoBuscar" operation="_eiFrwBhbEeaPkPy0HRxdBw"/>
-    <packagedElement xmi:type="uml:CallEvent" xmi:id="_lqDXgBhcEeaPkPy0HRxdBw" name="EventoDeletar" operation="_lUTxABhcEeaPkPy0HRxdBw"/>
   </packagedElement>
   <profileApplication xmi:id="_Nbf7EBhXEeaPkPy0HRxdBw">
     <eAnnotations xmi:id="_NbiXUBhXEeaPkPy0HRxdBw" source="http://www.eclipse.org/uml2/2.0.0/UML">
