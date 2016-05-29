@@ -1,0 +1,66 @@
+### Test Case Generation Statistics
+### Test Goal Satisfaction
+ - defined 12 test goals
+ - satisfied 12 test goals (100.0 %)
+
+### unsatisfied test goals
+
+
+### satisfied test goals
+
+ - satisfied: (test goal #1 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::CriandoConsignacao
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   triggered by EventoCancelar
+ - satisfied: (test goal #2 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::DandoBaixaEmConsignacao
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   triggered by EventoCancelar
+ - satisfied: (test goal #3 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::EditandoConsignacao
+   to node tmp2
+   triggered by EventoEditarSucesso
+   with condition truth: true
+((dadosValidos = true))
+ - satisfied: (test goal #4 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::EditandoConsignacao
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   triggered by EventoCancelar
+ - satisfied: (test goal #5 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::EditandoConsignacao
+   to node tmp1
+   triggered by EventoEditarErro
+   with condition truth: true
+((dadosValidos = false))
+ - satisfied: (test goal #6 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::DandoBaixaEmConsignacao
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   triggered by EventoDarBaixaSucesso
+ - satisfied: (test goal #7 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::CriandoConsignacao
+   to node tmp3
+   triggered by EventoCriarSucesso
+   with condition truth: true
+((dadosValidos = true))
+ - satisfied: (test goal #8 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::CriandoConsignacao
+   to node tmp4
+   triggered by EventoCriarErro
+   with condition truth: true
+((dadosValidos = false))
+ - satisfied: (test goal #9 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::CriandoConsignacao
+   triggered by EventoCriar
+ - satisfied: (test goal #10 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::EditandoConsignacao
+   triggered by EventoEditar
+ - satisfied: (test goal #11 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::DandoBaixaEmConsignacao
+   triggered by EventoDarBaixa
+ - satisfied: (test goal #12 - traversed transition) 
+   from node MaquinaEstadosGerenciamentoDeConsignacao::Region1::inicio
+   to node MaquinaEstadosGerenciamentoDeConsignacao::Region1::ListandoConsignacoes
+   triggered by default
