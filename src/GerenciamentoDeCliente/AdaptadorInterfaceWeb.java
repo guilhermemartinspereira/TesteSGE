@@ -143,13 +143,33 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			nome.clear();	
 			nome.sendKeys(conhecimento.get("dado.invalido.nome"));
 			
-			WebElement unidade = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoUnidade")));
-			unidade.clear();
-			unidade.sendKeys(conhecimento.get("dado.invalido.unidade"));
+			WebElement doc = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoDocumento")));
+			doc.clear();	
+			doc.sendKeys(conhecimento.get("dado.invalido.documento"));
 			
-			WebElement preco = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoPreco")));
-			preco.clear();
-			preco.sendKeys(conhecimento.get("dado.invalido.precoVenda"));
+			WebElement end = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEndereco")));
+			end.clear();	
+			end.sendKeys(conhecimento.get("dado.invalido.endereco"));
+			
+			WebElement bairro = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoBairro")));
+			bairro.clear();	
+			bairro.sendKeys(conhecimento.get("dado.invalido.bairro"));
+			
+			WebElement city = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoCidade")));
+			city.clear();	
+			city.sendKeys(conhecimento.get("dado.invalido.cidade"));
+			
+			WebElement uf = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoUf")));
+			uf.clear();	
+			uf.sendKeys(conhecimento.get("dado.invalido.uf"));
+			
+			WebElement fone = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoTelefone")));
+			fone.clear();	
+			fone.sendKeys(conhecimento.get("dado.invalido.telefone"));
+			
+			WebElement mail = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEmail")));
+			mail.clear();	
+			mail.sendKeys(conhecimento.get("dado.invalido.email"));
 			
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.enviarDados"))).click();
 			Thread.sleep(3000);
@@ -172,13 +192,33 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			nome.clear();	
 			nome.sendKeys(conhecimento.get("dado.valido.nome"));
 			
-			WebElement unidade = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoUnidade")));
-			unidade.clear();
-			unidade.sendKeys(conhecimento.get("dado.valido.unidade"));
+			WebElement doc = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoDocumento")));
+			doc.clear();	
+			doc.sendKeys(conhecimento.get("dado.valido.documento"));
 			
-			WebElement preco = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoPreco")));
-			preco.clear();
-			preco.sendKeys(conhecimento.get("dado.valido.precoVenda"));
+			WebElement end = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEndereco")));
+			end.clear();	
+			end.sendKeys(conhecimento.get("dado.valido.endereco"));
+			
+			WebElement bairro = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoBairro")));
+			bairro.clear();	
+			bairro.sendKeys(conhecimento.get("dado.valido.bairro"));
+			
+			WebElement city = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoCidade")));
+			city.clear();	
+			city.sendKeys(conhecimento.get("dado.valido.cidade"));
+			
+			WebElement uf = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoUf")));
+			uf.clear();	
+			uf.sendKeys(conhecimento.get("dado.valido.uf"));
+			
+			WebElement fone = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoTelefone")));
+			fone.clear();	
+			fone.sendKeys(conhecimento.get("dado.valido.telefone"));
+			
+			WebElement mail = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEmail")));
+			mail.clear();	
+			mail.sendKeys(conhecimento.get("dado.valido.email"));
 			
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.enviarDados"))).click();
 			Thread.sleep(3000);
