@@ -12,7 +12,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public static ConhecimentoDeDominioDeInterfaceWeb conhecimento;
 	
 	public AdaptadorInterfaceWeb() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		driver = new ChromeDriver();
 		conhecimento = new ConhecimentoDeDominioDeInterfaceWeb();
 		
@@ -32,7 +32,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkAbrirEstoque"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela do estoque? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
+//			Assert.assertEquals("O tï¿½tulo mudou para o da tela do estoque? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.GerenciandoItens;
 		} catch (Exception e) {
@@ -48,7 +48,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkIncrementarDecrementar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela de gerenciamento de item existente? ", conhecimento.get("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o da tela de gerenciamento de item existente? ", conhecimento.get("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.IncrementandoDecrementandoQuantidade;
 		} catch (Exception e) {
@@ -68,11 +68,11 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			Thread.sleep(3000);
 			
 			if(contexto.quantidade > 0) {
-				Assert.assertEquals("O título mudou para o da tela de gerenciamento de itens? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
+				Assert.assertEquals("O tï¿½tulo mudou para o da tela de gerenciamento de itens? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
 				Assert.assertTrue("A mensagem de sucesso foi exibida? ", driver.getPageSource().contains(conhecimento.get("mensagem.removerSucesso")));
 				contexto.estado = Estado.GerenciandoItens;				
 			} else {
-				Assert.assertEquals("O título continua igual? ", conhecimento.get("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString()), driver.getTitle());
+				Assert.assertEquals("O tï¿½tulo continua igual? ", conhecimento.get("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString()), driver.getTitle());
 				Assert.assertTrue("A mensagem de sucesso foi exibida? ", driver.getPageSource().contains(conhecimento.get("mensagem.removerErro")));
 				contexto.estado = Estado.IncrementandoDecrementandoQuantidade;
 			}
@@ -110,11 +110,11 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			qt.sendKeys(conhecimento.get("dado.valido.quantidade"));
 			
 			if(contexto.quantidade > 0) {
-				Assert.assertEquals("O título mudou para o da tela de gerenciamento de itens? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
+				Assert.assertEquals("O tï¿½tulo mudou para o da tela de gerenciamento de itens? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
 				Assert.assertTrue("A mensagem de sucesso foi exibida? ", driver.getPageSource().contains(conhecimento.get("mensagem.adicionarSucesso")));
 				contexto.estado = Estado.GerenciandoItens;				
 			} else {
-				Assert.assertEquals("O título continua igual? ", conhecimento.get("titulo." + aux.toString()), driver.getTitle());
+				Assert.assertEquals("O tï¿½tulo continua igual? ", conhecimento.get("titulo." + aux.toString()), driver.getTitle());
 				Assert.assertTrue("A mensagem de sucesso foi exibida? ", driver.getPageSource().contains(conhecimento.get("mensagem.adicionarErro")));
 				contexto.estado = aux;
 			}
@@ -131,7 +131,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCancelar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela de gerenciamento de item existente? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o da tela de gerenciamento de item existente? ", conhecimento.get("titulo." + Estado.GerenciandoItens.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.GerenciandoItens;
 		} catch (Exception e) {
@@ -149,7 +149,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkPesquisar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoques.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoques.toString()), driver.getTitle());
 			Assert.assertTrue("Os resultados foram exibidos? ", driver.findElement(By.cssSelector(conhecimento.get("seletor.item"))).isDisplayed());
 			
 			contexto.estado = Estado.ListandoEstoques;
@@ -165,7 +165,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCancelar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela de lista de estoques? ", conhecimento.get("titulo." + Estado.ListandoEstoques.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o da tela de lista de estoques? ", conhecimento.get("titulo." + Estado.ListandoEstoques.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.ListandoEstoques;
 		} catch (Exception e) {
@@ -181,7 +181,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkIncrementarDecrementar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela de gerenciamento de item existente? ", conhecimento.get("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o da tela de gerenciamento de item existente? ", conhecimento.get("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.IncrementandoDecrementandoQuantidade;
 		} catch (Exception e) {

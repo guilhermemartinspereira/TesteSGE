@@ -9,7 +9,7 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 	public ConhecimentoDeDominioDeInterfaceWeb() {
 		mapa = new HashMap<>();
 		
-		mapa.put("url.inicio", "http://localhost:8100/#/tab/itens");
+		mapa.put("url.inicio", "file:///Users/romulozanconeto/git/purplefitness-interface/estoque.html");
 		
 		mapa.put("titulo." + Estado.GerenciandoItens.toString(), "Estoque");
 		mapa.put("titulo." + Estado.IncrementandoDecrementandoQuantidade.toString(), "Incrementando/Decrementando Item");
@@ -17,7 +17,7 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 		mapa.put("titulo." + Estado.AdicionandoItem.toString(), "Adicionando Item Existente");
 		
 		mapa.put("seletor.linkAbrirEstoque", ".button-open");
-		mapa.put("seletor.linkIncrementarDecrementar", ".button-open");
+		mapa.put("seletor.linkIncrementarDecrementar", ".button-openincrement");
 		mapa.put("seletor.linkRemover", ".button-decrement");
 		mapa.put("seletor.linkAdicionar", ".button-increment");
 		mapa.put("seletor.linkCancelar", ".button-cancel");

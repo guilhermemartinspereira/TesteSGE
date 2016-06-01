@@ -12,7 +12,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public static ConhecimentoDeDominioDeInterfaceWeb conhecimento;
 	
 	public AdaptadorInterfaceWeb() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		driver = new ChromeDriver();
 		conhecimento = new ConhecimentoDeDominioDeInterfaceWeb();
 		
@@ -32,7 +32,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCriar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela de criação? ", conhecimento.get("titulo." + Estado.CriandoEstoque.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o da tela de criaï¿½ï¿½o? ", conhecimento.get("titulo." + Estado.CriandoEstoque.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.CriandoEstoque;
 		} catch (Exception e) {
@@ -53,7 +53,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkEditar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela de edição? ", conhecimento.get("titulo." + Estado.EditandoEstoque.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o da tela de ediï¿½ï¿½o? ", conhecimento.get("titulo." + Estado.EditandoEstoque.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.EditandoEstoque;
 		} catch (Exception e) {
@@ -95,7 +95,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkPesquisar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoque.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoque.toString()), driver.getTitle());
 			Assert.assertTrue("Os resultados foram exibidos? ", driver.findElement(By.cssSelector(conhecimento.get("seletor.item"))).isDisplayed());
 			
 			contexto.estado = Estado.ListandoEstoque;
@@ -110,7 +110,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkDeletar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoque.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo continuou igual? ", conhecimento.get("titulo." + Estado.ListandoEstoque.toString()), driver.getTitle());
 			Assert.assertTrue("A mensagem de sucesso foi exibida? ", driver.getPageSource().contains(conhecimento.get("mensagem.deletarSucesso")));
 			
 			contexto.estado = Estado.ListandoEstoque;
@@ -126,7 +126,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCancelar"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o da tela de listagem? ", conhecimento.get("titulo." + Estado.ListandoEstoque.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o da tela de listagem? ", conhecimento.get("titulo." + Estado.ListandoEstoque.toString()), driver.getTitle());
 			
 			contexto.estado = Estado.ListandoEstoque;
 		} catch (Exception e) {
@@ -137,7 +137,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	
 	private void executarEventoSalvarDadosErro(ContextoGerenciamentoDeEstoque contexto, Estado estado, String seletorMensagem) {
 		try {
-			Assert.assertFalse("Os dados são válidos?", contexto.dadosValidos.booleanValue());
+			Assert.assertFalse("Os dados sï¿½o vï¿½lidos?", contexto.dadosValidos.booleanValue());
 			
 			WebElement nome = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoTitulo")));
 			nome.clear();	
@@ -146,7 +146,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.enviarDados"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título continuou igual? ", conhecimento.get("titulo." + estado.toString()), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo continuou igual? ", conhecimento.get("titulo." + estado.toString()), driver.getTitle());
 			
 			Assert.assertFalse("A mensagem de erro foi exibida? ", !driver.getPageSource().contains(conhecimento.get(seletorMensagem)));
 			
@@ -158,7 +158,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	
 	private void executarEventoSalvarDadosSucesso(ContextoGerenciamentoDeEstoque contexto, String seletorMensagem) {
 		try {
-			Assert.assertTrue("Os dados são válidos?", contexto.dadosValidos.booleanValue());
+			Assert.assertTrue("Os dados sï¿½o vï¿½lidos?", contexto.dadosValidos.booleanValue());
 			
 			WebElement nome = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoTitulo")));
 			nome.clear();	
@@ -167,7 +167,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.enviarDados"))).click();
 			Thread.sleep(3000);
 			
-			Assert.assertEquals("O título mudou para o de listagem? ", conhecimento.get("titulo." + Estado.ListandoEstoque), driver.getTitle());
+			Assert.assertEquals("O tï¿½tulo mudou para o de listagem? ", conhecimento.get("titulo." + Estado.ListandoEstoque), driver.getTitle());
 			
 			Assert.assertFalse("A mensagem de sucesso foi exibida? ", !driver.getPageSource().contains(conhecimento.get(seletorMensagem)));
 			

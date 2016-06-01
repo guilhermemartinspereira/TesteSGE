@@ -2,7 +2,7 @@ package EntradaSaidaDeEstoque;
 
 public class ContextoEntradaSaidaDeEstoque {
 
-	public Estado estado;
+	public Estado estado = Estado.ListandoEstoques;
 	public Integer quantidade;
 
 	public void handleEvent(String evento) {

@@ -9,7 +9,7 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 	public ConhecimentoDeDominioDeInterfaceWeb() {
 		mapa = new HashMap<>();
 		
-		mapa.put("url.inicio", "http://localhost:8100/#/tab/itens");
+		mapa.put("url.inicio", "file:///Users/romulozanconeto/git/purplefitness-interface/consignacao.html");
 		
 		mapa.put("seletor.linkCriar", ".button-add");
 		mapa.put("seletor.linkEditar", ".item:nth-of-type(1) a");
@@ -27,10 +27,10 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 				
 		mapa.put("seletor.item", ".item");
 		
-		mapa.put("mensagem.editarErro", "Alguns campos estão com erros");
-		mapa.put("mensagem.criarErro", "Alguns campos estão com erros");
-		mapa.put("mensagem.editarSucesso", "Consignação salva com sucesso");
-		mapa.put("mensagem.criarSucesso", "Consignação criada com sucesso");
+		mapa.put("mensagem.editarErro", "Alguns campos estï¿½o com erros");
+		mapa.put("mensagem.criarErro", "Alguns campos estï¿½o com erros");
+		mapa.put("mensagem.editarSucesso", "Consignaï¿½ï¿½o salva com sucesso");
+		mapa.put("mensagem.criarSucesso", "Consignaï¿½ï¿½o criada com sucesso");
 		mapa.put("mensagem.darBaixaSucesso", "Baixa efetuada com sucesso");
 			
 		mapa.put("dado.valido.cliente", "jose");

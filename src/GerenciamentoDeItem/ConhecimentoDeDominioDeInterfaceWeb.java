@@ -9,15 +9,15 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 	public ConhecimentoDeDominioDeInterfaceWeb() {
 		mapa = new HashMap<>();
 		
-		mapa.put("url.inicio", "http://localhost:8100/#/tab/itens");
+		mapa.put("url.inicio", "file:///Users/romulozanconeto/git/purplefitness-interface/item.html");
 		
 		mapa.put("titulo." + Estado.CriandoItem.toString(), "Item");
 		mapa.put("titulo." + Estado.ListandoItem.toString(), "Itens");
 		mapa.put("titulo." + Estado.EditandoItem.toString(), "Item");
 		
 		mapa.put("seletor.linkCriar", ".button-add");
-		mapa.put("seletor.linkEditar", ".item:nth-of-type(1) a");
-		mapa.put("seletor.linkDeletar", ".button-remove:nth-of-type(1)");
+		mapa.put("seletor.linkEditar", ".item a");
+		mapa.put("seletor.linkDeletar", ".button-remove");
 		mapa.put("seletor.linkCancelar", ".back-button");
 		mapa.put("seletor.linkPesquisar", ".button-search");
 		mapa.put("seletor.enviarDados", ".button.button-full");
@@ -29,11 +29,11 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 		mapa.put("seletor.campoConsulta", "input[type='search']");
 		mapa.put("seletor.item", ".item");
 		
-		mapa.put("mensagem.editarErro", "Alguns campos estão com erros");
-		mapa.put("mensagem.criarErro", "Alguns campos estão com erros");
+		mapa.put("mensagem.editarErro", "Alguns campos estao com erros");
+		mapa.put("mensagem.criarErro", "Alguns campos estao com erros");
 		mapa.put("mensagem.editarSucesso", "Item salvo com sucesso");
 		mapa.put("mensagem.criarSucesso", "Item criado com sucesso");
-		mapa.put("mensagem.deletarSucesso", "Item excluído com sucesso");
+		mapa.put("mensagem.deletarSucesso", "Item excluido com sucesso");
 		
 		mapa.put("dado.valido.nome", "camiseta");
 		mapa.put("dado.valido.quantidade", "50");
