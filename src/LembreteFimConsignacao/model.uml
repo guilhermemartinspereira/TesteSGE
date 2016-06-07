@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fzEmABesEeaRmvQzRRFWvg" name="">
+  <packageImport xmi:id="_f4lYIBesEeaRmvQzRRFWvg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_tjO4UBeuEeaRmvQzRRFWvg" name="LembreteFimConsignacao">
+    <packagedElement xmi:type="uml:Class" xmi:id="_yWhBIBeuEeaRmvQzRRFWvg" name="ContextoLembreteFimConsignacao">
+      <ownedAttribute xmi:id="_Cd7UIBewEeaRmvQzRRFWvg" name="data">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ONERgC0JEea276C2KuJxLQ" name="filtroAplicado">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_XaJsIC0JEea276C2KuJxLQ" value="true"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_fz0M4BesEeaRmvQzRRFWvg" name="MaquinaEstadosLembreteFimConsignacao">
+        <region xmi:id="_f0HH0BesEeaRmvQzRRFWvg" name="Region1">
+          <transition xmi:id="_JWt6MBhbEeaPkPy0HRxdBw" name="buscar3" guard="_hnHMMC0FEea276C2KuJxLQ" source="_gsh9kBesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <ownedRule xmi:id="_OmJ-EBhcEeaPkPy0HRxdBw">
+              <specification xmi:type="uml:LiteralString" xmi:id="_OmJ-ERhcEeaPkPy0HRxdBw" value="dadosValidos=true"/>
+            </ownedRule>
+            <ownedRule xmi:id="_hnHMMC0FEea276C2KuJxLQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_hnHMMS0FEea276C2KuJxLQ" value="data>=0"/>
+            </ownedRule>
+            <trigger xmi:id="_hoc_wBhbEeaPkPy0HRxdBw" event="_fWDfUBhbEeaPkPy0HRxdBw"/>
+          </transition>
+          <transition xmi:id="_a5uBcBhcEeaPkPy0HRxdBw" guard="_tO_OQC0FEea276C2KuJxLQ" source="_gsh9kBesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <ownedRule xmi:id="_tO_OQC0FEea276C2KuJxLQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_tO_OQS0FEea276C2KuJxLQ" value="data&lt;-604800"/>
+            </ownedRule>
+            <trigger xmi:id="_mKMQIBhcEeaPkPy0HRxdBw" event="_fWDfUBhbEeaPkPy0HRxdBw"/>
+          </transition>
+          <transition xmi:id="_kKNQgC0EEea276C2KuJxLQ" name="buscar2" guard="_pOyIMC0FEea276C2KuJxLQ" source="_gsh9kBesEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg">
+            <ownedRule xmi:id="_pOyIMC0FEea276C2KuJxLQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_pOyIMS0FEea276C2KuJxLQ" value="-604800&lt;=data and data&lt;0"/>
+            </ownedRule>
+            <trigger xmi:id="_UQQf0C0FEea276C2KuJxLQ" event="_fWDfUBhbEeaPkPy0HRxdBw"/>
+          </transition>
+          <transition xmi:id="_Pa_5sC0IEea276C2KuJxLQ" source="_TP6VgBeuEeaRmvQzRRFWvg" target="_gsh9kBesEeaRmvQzRRFWvg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_gsh9kBesEeaRmvQzRRFWvg" name="ListandoMateriaPrima" isLeaf="true" stateInvariant="_L6z7AC0JEea276C2KuJxLQ">
+            <ownedRule xmi:id="_L6z7AC0JEea276C2KuJxLQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_L6z7AS0JEea276C2KuJxLQ" value="filtroAplicado=true"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_TP6VgBeuEeaRmvQzRRFWvg" name="inicio"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_eiFrwBhbEeaPkPy0HRxdBw" name="buscar">
+        <ownedParameter xmi:id="_Rh1KsC0FEea276C2KuJxLQ" name="data">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_fWDfUBhbEeaPkPy0HRxdBw" name="EventoBuscar" operation="_eiFrwBhbEeaPkPy0HRxdBw"/>
+  </packagedElement>
+  <profileApplication xmi:id="_Nbf7EBhXEeaPkPy0HRxdBw">
+    <eAnnotations xmi:id="_NbiXUBhXEeaPkPy0HRxdBw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
