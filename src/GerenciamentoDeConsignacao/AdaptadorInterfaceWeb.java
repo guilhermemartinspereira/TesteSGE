@@ -1,10 +1,13 @@
 package GerenciamentoDeConsignacao;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class AdaptadorInterfaceWeb implements Adaptador {
 
@@ -93,18 +96,15 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			
 			Assert.assertFalse("Os dados são válidos?", contexto.dadosValidos.booleanValue());
 			
-			WebElement cliente = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoCliente")));
-			cliente.sendKeys(conhecimento.get("dado.valido.cliente"));
-			driver.findElement(By.cssSelector(conhecimento.get("seletor.resultadoCliente"))).click();
+			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoCliente"))))
+				.selectByVisibleText(conhecimento.get("dado.valido.cliente"));
 			
-			WebElement estoque = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEstoque")));
-			estoque.sendKeys(conhecimento.get("dado.valido.estoque"));
-			driver.findElement(By.cssSelector(conhecimento.get("seletor.resultadoEstoque"))).click();
+			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoEstoque"))))
+			.selectByVisibleText(conhecimento.get("dado.valido.estoque"));
 			
-			WebElement item = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoItem")));
-			item.sendKeys(conhecimento.get("dado.valido.item"));
-			driver.findElement(By.cssSelector(conhecimento.get("seletor.resultadoItem"))).click();
-						
+			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoItem"))))
+			.selectByVisibleText(conhecimento.get("dado.valido.item"));
+			
 			WebElement data = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoData")));
 			data.clear();
 			data.sendKeys(conhecimento.get("dado.invalido.data"));			
@@ -127,17 +127,15 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	private void executarEventoSalvarDadosSucesso(ContextoGerenciamentoDeConsignacao contexto, String seletorMensagem) {
 		try {
 			Assert.assertTrue("Os dados são válidos?", contexto.dadosValidos.booleanValue());
-			WebElement cliente = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoCliente")));
-			cliente.sendKeys(conhecimento.get("dado.valido.cliente"));
-			driver.findElement(By.cssSelector(conhecimento.get("seletor.resultadoCliente"))).click();
 			
-			WebElement estoque = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEstoque")));
-			estoque.sendKeys(conhecimento.get("dado.valido.estoque"));
-			driver.findElement(By.cssSelector(conhecimento.get("seletor.resultadoEstoque"))).click();
+			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoCliente"))))
+			.selectByVisibleText(conhecimento.get("dado.valido.cliente"));
+		
+			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoEstoque"))))
+			.selectByVisibleText(conhecimento.get("dado.valido.estoque"));
 			
-			WebElement item = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoItem")));
-			item.sendKeys(conhecimento.get("dado.valido.item"));
-			driver.findElement(By.cssSelector(conhecimento.get("seletor.resultadoItem"))).click();
+			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoItem"))))
+			.selectByVisibleText(conhecimento.get("dado.valido.item"));
 						
 			WebElement data = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoData")));
 			data.clear();
@@ -162,6 +160,13 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public void executarEventoDarBaixa(ContextoGerenciamentoDeConsignacao contexto) {
 		// TODO Auto-generated method stub
 		try {
+			List<WebElement> itens = driver.findElements(By.cssSelector(conhecimento.get("seletor.itensBaixa")));
+			
+			for(int i=0; i<itens.size(); i++) {
+				itens.get(i).sendKeys(conhecimento.get("dados.quantidade"));
+			}
+				
+			
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkBaixa"))).click();
 			Thread.sleep(3000);
 					

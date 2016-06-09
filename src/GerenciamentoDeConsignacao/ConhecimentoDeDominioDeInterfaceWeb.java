@@ -16,6 +16,7 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 		mapa.put("seletor.linkCancelar", ".back-button");
 		mapa.put("seletor.linkBaixa", ".consig .item .baixa");
 		mapa.put("seletor.enviarDados", ".button.button-full");
+		mapa.put("seletor.itensBaixa", "tr.item-baixa input");
 				
 		mapa.put("seletor.campoCliente", ".client-form-group .chosen");		
 		mapa.put("seletor.resultadoCliente", ".client-form-group .result");
@@ -39,6 +40,7 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 		mapa.put("dado.valido.nome", "jose");
 		mapa.put("dado.valido.quantidadeItem", "5");
 		mapa.put("dado.valido.data", "29/05/2016");
+		mapa.put("dados.quantidade", "1");
 				
 		mapa.put("dado.invalido.data", "ascas");		
 				
