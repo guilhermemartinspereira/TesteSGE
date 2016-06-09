@@ -1,0 +1,38 @@
+### Test Case Generation Statistics
+### Test Goal Satisfaction
+ - defined 7 test goals
+ - satisfied 7 test goals (100.0 %)
+
+### unsatisfied test goals
+
+
+### satisfied test goals
+
+ - satisfied: (test goal #1 - traversed transition) 
+   from node MaquinaEstadosRelatorioDeConsignacao::Region1::VisualizandoRelatorio
+   to node tmp1
+   triggered by EventoExportar
+ - satisfied: (test goal #2 - traversed transition) 
+   from node MaquinaEstadosRelatorioDeConsignacao::Region1::VisualizandoRelatorio
+   to node MaquinaEstadosRelatorioDeConsignacao::Region1::ListandoConsignacoes
+   triggered by EventoCancelar
+ - satisfied: (test goal #3 - traversed transition) 
+   from node MaquinaEstadosRelatorioDeConsignacao::Region1::VisualizandoRelatorio
+   to node MaquinaEstadosRelatorioDeConsignacao::Region1::VisualizandoRelatorio
+   triggered by EventoGerar
+ - satisfied: (test goal #4 - traversed transition) 
+   from node MaquinaEstadosRelatorioDeConsignacao::Region1::GerandoRelatorio
+   to node MaquinaEstadosRelatorioDeConsignacao::Region1::ListandoConsignacoes
+   triggered by EventoCancelar
+ - satisfied: (test goal #5 - traversed transition) 
+   from node MaquinaEstadosRelatorioDeConsignacao::Region1::GerandoRelatorio
+   to node MaquinaEstadosRelatorioDeConsignacao::Region1::VisualizandoRelatorio
+   triggered by EventoGerar
+ - satisfied: (test goal #6 - traversed transition) 
+   from node MaquinaEstadosRelatorioDeConsignacao::Region1::ListandoConsignacoes
+   to node MaquinaEstadosRelatorioDeConsignacao::Region1::GerandoRelatorio
+   triggered by EventoGerarRelatorio
+ - satisfied: (test goal #7 - traversed transition) 
+   from node MaquinaEstadosRelatorioDeConsignacao::Region1::inicio
+   to node MaquinaEstadosRelatorioDeConsignacao::Region1::ListandoConsignacoes
+   triggered by default
