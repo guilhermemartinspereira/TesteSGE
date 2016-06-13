@@ -12,7 +12,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public static ConhecimentoDeDominioDeInterfaceWeb conhecimento;
 	
 	public AdaptadorInterfaceWeb() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		driver = new ChromeDriver();
 		conhecimento = new ConhecimentoDeDominioDeInterfaceWeb();
 		
@@ -109,7 +109,6 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 		try {
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.linkCancelar"))).click();
 			Thread.sleep(3000);
-						
 			contexto.estado = Estado.ListandoMateriaPrima;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -119,7 +118,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	
 	private void executarEventoSalvarDadosErro(ContextoGerenciamentoDeMateriaPrima contexto, Estado estado, String seletorMensagem) {
 		try {
-			Assert.assertFalse("Os dados são válidos?", contexto.dadosValidos.booleanValue());
+			Assert.assertFalse("Os dados sï¿½o vï¿½lidos?", contexto.dadosValidos.booleanValue());
 			
 			WebElement nome = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoNome")));
 			nome.clear();	
@@ -146,7 +145,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	
 	private void executarEventoSalvarDadosSucesso(ContextoGerenciamentoDeMateriaPrima contexto, String seletorMensagem) {
 		try {
-			Assert.assertTrue("Os dados são válidos?", contexto.dadosValidos.booleanValue());
+			Assert.assertTrue("Os dados sï¿½o vï¿½lidos?", contexto.dadosValidos.booleanValue());
 			
 			WebElement nome = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoNome")));
 			nome.clear();	

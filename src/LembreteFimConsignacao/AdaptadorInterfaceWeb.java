@@ -11,7 +11,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public static ConhecimentoDeDominioDeInterfaceWeb conhecimento;
 	
 	public AdaptadorInterfaceWeb() {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		driver = new ChromeDriver();
 		conhecimento = new ConhecimentoDeDominioDeInterfaceWeb();
 		

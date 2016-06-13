@@ -94,15 +94,12 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 		try {
 			// Cliente, estoque, data, itens(quantidade de itens
 			
-			Assert.assertFalse("Os dados são válidos?", contexto.dadosValidos.booleanValue());
+			Assert.assertFalse("Os dados sï¿½o vï¿½lidos?", contexto.dadosValidos.booleanValue());
 			
-			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoCliente"))))
-				.selectByVisibleText(conhecimento.get("dado.valido.cliente"));
-			
-			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoEstoque"))))
+			new Select(driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEstoque"))))
 			.selectByVisibleText(conhecimento.get("dado.valido.estoque"));
 			
-			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoItem"))))
+			new Select(driver.findElement(By.cssSelector(conhecimento.get("seletor.campoItem"))))
 			.selectByVisibleText(conhecimento.get("dado.valido.item"));
 			
 			WebElement data = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoData")));
@@ -126,15 +123,15 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	
 	private void executarEventoSalvarDadosSucesso(ContextoGerenciamentoDeConsignacao contexto, String seletorMensagem) {
 		try {
-			Assert.assertTrue("Os dados são válidos?", contexto.dadosValidos.booleanValue());
+			Assert.assertTrue("Os dados sï¿½o vï¿½lidos?", contexto.dadosValidos.booleanValue());
 			
-			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoCliente"))))
+			new Select(driver.findElement(By.cssSelector(conhecimento.get("seletor.campoCliente"))))
 			.selectByVisibleText(conhecimento.get("dado.valido.cliente"));
 		
-			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoEstoque"))))
+			new Select(driver.findElement(By.cssSelector(conhecimento.get("seletor.campoEstoque"))))
 			.selectByVisibleText(conhecimento.get("dado.valido.estoque"));
 			
-			new Select(driver.findElement(By.id(conhecimento.get("seletor.campoItem"))))
+			new Select(driver.findElement(By.cssSelector(conhecimento.get("seletor.campoItem"))))
 			.selectByVisibleText(conhecimento.get("dado.valido.item"));
 						
 			WebElement data = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoData")));
@@ -144,6 +141,8 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 			WebElement quantidadeItem = driver.findElement(By.cssSelector(conhecimento.get("seletor.campoQuantidadeItem")));
 			quantidadeItem.clear();
 			quantidadeItem.sendKeys(conhecimento.get("dado.valido.quantidadeItem"));
+			
+			driver.findElement(By.cssSelector(conhecimento.get("seletor.inserir"))).click();
 			
 			driver.findElement(By.cssSelector(conhecimento.get("seletor.enviarDados"))).click();
 			Thread.sleep(3000);
@@ -181,7 +180,7 @@ public class AdaptadorInterfaceWeb implements Adaptador {
 	public void executarEventoDarBaixaSucesso(ContextoGerenciamentoDeConsignacao contexto) {
 		// TODO Auto-generated method stub
 		try {
-			driver.findElement(By.cssSelector(conhecimento.get("seletor.enviarDados"))).click();
+			driver.findElement(By.cssSelector(conhecimento.get("seletor.salvarDados"))).click();
 			Thread.sleep(3000);
 					
 			contexto.estado = Estado.ListandoConsignacoes;

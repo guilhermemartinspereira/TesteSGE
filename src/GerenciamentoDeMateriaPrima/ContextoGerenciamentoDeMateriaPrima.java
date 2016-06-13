@@ -13,13 +13,10 @@ public class ContextoGerenciamentoDeMateriaPrima {
 		case "EventoCriar":
 			adaptador.executarEventoCriar(this);
 			break;
-		case "EventoCancelarCriacao":
-			adaptador.executarEventoCancelar(this);
-			break;
 		case "EventoEditar":
 			adaptador.executarEventoEditar(this);
 			break;
-		case "EventoCancelarEdicao":
+		case "EventoCancelar":
 			adaptador.executarEventoCancelar(this);
 			break;
 		case "EventoCriarErro":

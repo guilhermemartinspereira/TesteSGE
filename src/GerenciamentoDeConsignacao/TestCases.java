@@ -60,18 +60,18 @@ public class TestCases{
 	}
 	
 	@Test
-	public void test5()
-	{
-		ContextoGerenciamentoDeConsignacao oTestObject = new ContextoGerenciamentoDeConsignacao();
-		Boolean dadosValidos2 = false;
-		assertEquals(true, (oTestObject.estado == Estado.ListandoConsignacoes));
-		oTestObject.handleEvent("EventoEditar");
-		assertEquals(true, (oTestObject.estado == Estado.EditandoConsignacao));
-		assertEquals(true, (dadosValidos2.booleanValue() == false));
-		oTestObject.handleEvent("EventoEditarErro", dadosValidos2);
-		assertEquals(true, (oTestObject.estado == Estado.EditandoConsignacao));
-		
-	}
+    public void test5()
+    {
+        ContextoGerenciamentoDeConsignacao oTestObject = new ContextoGerenciamentoDeConsignacao();
+        Boolean dadosValidos2 = false;
+        assertEquals(true, (oTestObject.estado == Estado.ListandoConsignacoes));
+        oTestObject.handleEvent("EventoCriar");
+        assertEquals(true, (oTestObject.estado == Estado.CriandoConsignacao));
+        assertEquals(true, (dadosValidos2.booleanValue() == false));
+        oTestObject.handleEvent("EventoCriarErro", dadosValidos2);
+        assertEquals(true, (oTestObject.estado == Estado.CriandoConsignacao));
+        
+    }
 	
 	@Test
 	public void test6()
@@ -98,18 +98,6 @@ public class TestCases{
 		
 	}
 	
-	@Test
-	public void test8()
-	{
-		ContextoGerenciamentoDeConsignacao oTestObject = new ContextoGerenciamentoDeConsignacao();
-		Boolean dadosValidos2 = false;
-		assertEquals(true, (oTestObject.estado == Estado.ListandoConsignacoes));
-		oTestObject.handleEvent("EventoCriar");
-		assertEquals(true, (oTestObject.estado == Estado.CriandoConsignacao));
-		assertEquals(true, (dadosValidos2.booleanValue() == false));
-		oTestObject.handleEvent("EventoCriarErro", dadosValidos2);
-		assertEquals(true, (oTestObject.estado == Estado.CriandoConsignacao));
-		
-	}
+	
 	
 }
