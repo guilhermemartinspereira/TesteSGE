@@ -27,14 +27,8 @@ public class ConhecimentoDeDominioDeInterfaceWeb {
 		Date dataInicial = new Date(System.currentTimeMillis()-30*24*60*60*1000);
 		
 		mapa.put("dado.valido.dataInicial", "09/06/2016");
-		mapa.put("dado.valido.descricao", "14/06/2016");
-		mapa.put("dado.valido.unidade", "kg");
-
-		mapa.put("dado.valido.nome", "");
-		mapa.put("dado.valido.descricao", "");
-		mapa.put("dado.valido.unidade", "");
+		mapa.put("dado.valido.dataFinal", "14/06/2016");
 		
-		mapa.put("dado.consulta", "tecido");
 	}
 	
 	public String get(String chave) {
